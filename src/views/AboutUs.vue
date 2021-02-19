@@ -1,8 +1,6 @@
 <template>
   <WithHeaderFooter background="assets/menu/bg_aboutus.svg">
-    <div class="pageContent">
-      About Us
-    </div>
+    <div class="pageContent">About Us</div>
     <div class="bgContainer"></div>
   </WithHeaderFooter>
 </template>

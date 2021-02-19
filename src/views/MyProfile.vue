@@ -1,8 +1,6 @@
 <template>
   <WithHeaderFooter>
-    <div class="pageContent">
-      My Profile
-    </div>
+    <div class="pageContent">My Profile</div>
     <div class="bgContainer"></div>
   </WithHeaderFooter>
 </template>

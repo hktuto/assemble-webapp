@@ -60,5 +60,8 @@
     "address": "地址",
     "password": "密碼",
     "confirmpassword": "確認密碼"
+  },
+  "howto": {
+    "title": "說明"
   }
 }

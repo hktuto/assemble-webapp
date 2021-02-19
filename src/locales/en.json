@@ -60,5 +60,8 @@
     "address": "Address",
     "password": "Password",
     "confirmpassword": "Confirm Password"
+  },
+  "howto": {
+    "title": "How To"
   }
 }
