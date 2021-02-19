@@ -1,5 +1,5 @@
 <template>
-  <WithHeaderFooter>
+  <WithHeaderFooter background="assets/menu/bg_aboutus.svg">
     <div class="pageContent">
       About Us
     </div>

@@ -1,5 +1,5 @@
 <template>
-  <WithHeaderFooter>
+  <WithHeaderFooter background="assets/menu/bg_howto.svg">
     <div class="pageContent">
       How To
     </div>

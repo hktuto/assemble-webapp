@@ -11,7 +11,7 @@
     <ion-content :fullscreen="true">
       <slot></slot>
     </ion-content>
-    <AppFooter></AppFooter>
+    <AppFooter :background="background"></AppFooter>
   </IonPage>
 </template>
 
@@ -43,6 +43,10 @@ export default defineComponent({
     title: {
       type: String,
       default: "",
+    },
+    background: {
+      type: String,
+      default: "assets/menu/bg_home.svg",
     },
   },
   setup() {

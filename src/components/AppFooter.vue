@@ -20,7 +20,7 @@
         </div>
         <label>Schedule</label>
       </div>
-      <div class="menuItem" @click="openAboutUs">
+      <div class="menuItem" @click="$router.push({ name: 'AboutUs' })">
         <div class="iconContainer">
           <IonIcon />
         </div>
@@ -34,44 +34,25 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, watch } from "vue";
+import { defineComponent } from "vue";
 import { IonFooter, IonIcon } from "@ionic/vue";
-import { useRoute } from "vue-router";
 
-import { Plugins } from "@capacitor/core";
-const { Browser } = Plugins;
+// import { Plugins } from "@capacitor/core";
+// const { Browser } = Plugins;
 
 export default defineComponent({
   components: {
     IonFooter,
     IonIcon,
   },
+  props: {
+    background: {
+      type: String,
+      default: "assets/menu/bg_home.svg",
+    },
+  },
   setup() {
-    const currentRoute = ref("");
-    const route = useRoute();
-    const background = ref("assets/menu/bg_home.svg");
-    watch(route, (newRoute) => {
-      switch (newRoute.name) {
-        case "Home":
-          background.value = "assets/menu/bg_home.svg";
-          break;
-        case "HowTo":
-          background.value = "assets/menu/bg_howto.svg";
-          break;
-        case "Schedule":
-          background.value = "assets/menu/bg_schedule.svg";
-          break;
-      }
-    });
-
-    const openAboutUs = async () =>
-      await Browser.open({ url: "https:/loverecyclingplus.com/" });
-    return {
-      currentRoute,
-      route,
-      background,
-      openAboutUs,
-    };
+    return {};
   },
 });
 </script>
@@ -101,6 +82,10 @@ export default defineComponent({
 
 .menuItem {
   text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: center;
 }
 .bg_container {
   width: 100%;

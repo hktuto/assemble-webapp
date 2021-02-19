@@ -3,7 +3,7 @@
     <ion-content :fullscreen="true">
       <slot />
     </ion-content>
-    <AppFooter />
+    <AppFooter :background="background" />
   </ion-page>
 </template>
 
@@ -13,5 +13,11 @@ import { IonPage, IonContent } from "@ionic/vue";
 import AppFooter from "@/components/AppFooter.vue";
 export default defineComponent({
   components: { IonPage, IonContent, AppFooter },
+  props: {
+    background: {
+      type: String,
+      default: "assets/menu/bg_home.svg",
+    },
+  },
 });
 </script>
