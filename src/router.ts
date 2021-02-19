@@ -14,6 +14,7 @@ const Schedule = () => import("./views/Schedule.vue");
 const AboutUs = () => import("./views/AboutUs.vue");
 const MyProfile = () => import("./views/MyProfile.vue");
 const OurServices = () => import("./views/OurServices.vue");
+const TermsAndConditions = () => import("./views/TermsAndConditions.vue");
 
 const needAuth: NavigationGuard = function(to: any, from: any, next: any) {
   const { isLogin } = useUser();
@@ -91,6 +92,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/OurServices",
     name: "OurServices",
     component: OurServices,
+  },
+  {
+    path: "/TermsAndConditions",
+    name: "TermsAndConditions",
+    component: TermsAndConditions,
   },
 ];
 

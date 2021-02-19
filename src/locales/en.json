@@ -63,5 +63,14 @@
   },
   "howto": {
     "title": "How To"
+  },
+  "terms": {
+    "title": "Terms & Conditions",
+    "t1": "There is no contract for this service, you may cancel anytime but there will be no part refund.",
+    "t2": "Your $200 deposit for the bin will be returned upon the cancellation of our service and the returned of our recycling bin.",
+    "t3": "Your $200 deposit will be forfeited if your recycling bin is lost or damaged beyond repair.",
+    "t4": "Please leave your recycling bin where we can reach it preferably by your gate,if we cannot find your bin we cannot collect. You may have to wait until the next collection, there will be no refund for this.",
+    "t5": "Under severe weather warnings such asTyphoon warning 8 or above, Red or Black rain warning, we may defer or cancel your collection.",
+    "t6": "LoveRecyclingPlus reserved all rights"
   }
 }
