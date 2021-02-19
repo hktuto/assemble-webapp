@@ -1,18 +1,52 @@
 <template>
   <ion-app>
-    <ion-router-outlet />
+    <ion-router-outlet :animated="false" />
   </ion-app>
 </template>
 
 <script lang="ts">
-import { IonApp, IonRouterOutlet } from '@ionic/vue';
-import { defineComponent } from 'vue';
+import { IonApp, IonRouterOutlet } from "@ionic/vue";
+import { defineComponent } from "vue";
+import { useApp } from "./state/useApp";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
-  name: 'App',
+  name: "App",
   components: {
     IonApp,
-    IonRouterOutlet
-  }
+    IonRouterOutlet,
+  },
+  setup() {
+    const { init } = useApp();
+    const { locale } = useI18n({ useScope: "global" });
+    locale.value = localStorage.getItem("appLocale") || "en";
+    return {
+      init,
+      locale,
+    };
+  },
 });
 </script>
+
+<style>
+.pageContent {
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.bgContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 180px;
+  bottom: 40px;
+  background-image: url(/assets/images/home/home_bg.png);
+  background-position: center bottom;
+  background-size: cover;
+  z-index: -1;
+  overflow: visible;
+}
+</style>

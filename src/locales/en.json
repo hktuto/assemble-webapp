@@ -1,0 +1,12 @@
+{
+  "menu": {
+    "our_services": "Our Services",
+    "login": "Login",
+    "donation": "Donation",
+    "my_profile": "My Profile",
+    "share": "Share"
+  },
+  "language": {
+    "switch": "中 / Eng"
+  }
+}

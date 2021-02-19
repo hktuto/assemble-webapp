@@ -1,0 +1,12 @@
+{
+  "menu": {
+    "login": "登錄",
+    "donation": "捐款",
+    "my_profile": "我等賬戶",
+    "share": "分享",
+    "our_services": "服務"
+  },
+  "language": {
+    "switch": "中 / Eng"
+  }
+}
