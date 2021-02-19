@@ -19,7 +19,9 @@
         <ion-slide>
           <div class="slideContainer">
             <IonImg src="assets/images/slides/s3.png"></IonImg>
-            <IonButton mode="ios" @click="contuine">Contuine</IonButton>
+            <IonButton mode="ios" @click="contuine">
+              {{ t("btn.next") }}
+            </IonButton>
           </div>
         </ion-slide>
       </ion-slides>
@@ -33,17 +35,20 @@ import PageContainer from "@/layout/PageContainer.vue";
 import { IonSlides, IonSlide, IonImg, IonButton } from "@ionic/vue";
 import { useApp } from "@/state/useApp";
 import { useRouter } from "vue-router";
+import { useI18n } from "vue-i18n";
 export default defineComponent({
   components: { PageContainer, IonSlides, IonSlide, IonImg, IonButton },
   setup() {
     const { setFirstLunch } = useApp();
     const router = useRouter();
+    const { t } = useI18n();
     const contuine = async () => {
       setFirstLunch(true);
       router.push("/home");
     };
     return {
       contuine,
+      t,
     };
   },
 });

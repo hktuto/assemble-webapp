@@ -8,36 +8,39 @@
         <IonButton
           expand="block"
           mode="ios"
-          @click="$router.push({ name: 'Register' })"
-          >{{ t("menu.our_services") }}</IonButton
+          @click="$router.push({ name: 'OurServices' })"
         >
+          {{ t("menu.our_services") }}
+        </IonButton>
         <IonButton
           v-if="!isLogin"
           expand="block"
           mode="ios"
           @click="$router.push({ name: 'Login' })"
-          >{{ t("menu.login") }}</IonButton
         >
-
+          {{ t("menu.login") }}
+        </IonButton>
         <IonButton
           expand="block"
           mode="ios"
           @click="$router.push({ name: 'Donation' })"
-          >{{ t("menu.donation") }}</IonButton
         >
+          {{ t("menu.donation") }}
+        </IonButton>
         <IonButton
           v-if="isLogin"
           expand="block"
           mode="ios"
           @click="$router.push({ name: 'MyProfile' })"
-          >{{ t("menu.my_profile") }}</IonButton
         >
-        <IonButton expand="block" mode="ios" @click="share">{{
-          t("menu.share")
-        }}</IonButton>
-        <IonButton size="small" mode="ios" @click="switchLanguage">{{
-          t("language.switch")
-        }}</IonButton>
+          {{ t("menu.my_profile") }}
+        </IonButton>
+        <IonButton expand="block" mode="ios" @click="share">
+          {{ t("menu.share") }}
+        </IonButton>
+        <IonButton size="small" mode="ios" @click="switchLanguage">
+          {{ t("language.switch") }}
+        </IonButton>
       </div>
     </div>
     <div class="bgContainer"></div>

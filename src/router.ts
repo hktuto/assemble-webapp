@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "@ionic/vue-router";
-import { RouteRecordRaw, NavigationGuard } from "vue-router";
+import { NavigationGuard, RouteRecordRaw } from "vue-router";
 import { useApp } from "./state/useApp";
 // import { useUser } from "./state/useUser";
 import Home from "./views/Home.vue";
@@ -12,6 +12,7 @@ const HowTo = () => import("./views/HowTo.vue");
 const Schedule = () => import("./views/Schedule.vue");
 const AboutUs = () => import("./views/AboutUs.vue");
 const MyProfile = () => import("./views/MyProfile.vue");
+const OurServices = () => import("./views/OurServices.vue");
 
 // const needAuth: NavigationGuard = function(to: any, from: any, next: any) {
 //   const { isLogin } = useUser();
@@ -83,6 +84,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "AboutUs",
     path: "/AboutUs",
     component: AboutUs,
+  },
+  {
+    name: "OurServices",
+    path: "/OurServices",
+    component: OurServices,
   },
 ];
 
