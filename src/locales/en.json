@@ -14,7 +14,9 @@
     "back": "Back",
     "login": "Login",
     "next": "Next",
-    "submit": "Submit"
+    "submit": "Submit",
+    "update": "Update",
+    "changeplan": "Change Plan"
   },
   "ourservices": {
     "title": "Our Services",
@@ -22,22 +24,6 @@
     "slogan2": "We collect once a week",
     "slogan3": "We send them to recyclers, not the landfill",
     "notice": "To ensure we can provide our service to your address,please whatsapp me on 93479770 to check before you subscribe to our service",
-    "plana": {
-      "title": "Plan A",
-      "name": "Love Recycling Basic",
-      "sort": "You Separate And Sort",
-      "price": "$99 / month",
-      "detail": "More details",
-      "btn": "Register And Order"
-    },
-    "planb": {
-      "title": "Plan B",
-      "name": "Love Recycling Plus",
-      "sort": "We Separate And Sort",
-      "price": "$149 / month",
-      "detail": "More details",
-      "btn": "Register And Order"
-    },
     "deposite": "A $200 refundable deposit will be charged for the recycling bin"
   },
   "login": {
@@ -83,5 +69,36 @@
     "email": "Email",
     "phone": "Phone/WhatsApp",
     "website": "Website"
+  },
+  "myprofile": {
+    "title": "Profile",
+    "firstname": "First Name",
+    "lastname": "Last Name",
+    "mobile": "Mobile",
+    "email": "Email",
+    "district": "District",
+    "address": "Address"
+  },
+  "plan": {
+    "plana": {
+      "title": "Plan A",
+      "name": "Love Recycling Basic",
+      "sort": "You Separate And Sort",
+      "price": "$99 / month",
+      "detail": "More details",
+      "btn": "Register And Order"
+    },
+    "planb": {
+      "title": "Plan B",
+      "name": "Love Recycling Plus",
+      "sort": "We Separate And Sort",
+      "price": "$149 / month",
+      "detail": "More details",
+      "btn": "Register And Order"
+    }
+  },
+  "changeplan": {
+    "title": "Change Plan",
+    "confirm": "Confirm"
   }
 }

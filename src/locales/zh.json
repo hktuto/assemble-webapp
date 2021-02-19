@@ -14,7 +14,9 @@
     "back": "返回",
     "login": "登錄",
     "next": "下一步",
-    "submit": "注冊"
+    "submit": "注冊",
+    "update": "更新",
+    "changeplan": "更改計劃"
   },
   "ourservices": {
     "title": "服務",
@@ -22,22 +24,6 @@
     "slogan2": "每星期上門收集一次，",
     "slogan3": "然後運送到對應的回收商循環再造。",
     "notice": "為確保我們能夠為你的地址提供服務，請在註冊付款前先whatapps 93479770 查詢",
-    "plana": {
-      "title": "計劃A",
-      "name": "基本愛回收計劃",
-      "sort": "自行分類整理",
-      "price": "$99 / 月",
-      "detail": "更多資訊",
-      "btn": "注冊並訂購"
-    },
-    "planb": {
-      "title": "計劃B",
-      "name": "簡易愛回收計劃",
-      "sort": "我們收集後代為分類整理",
-      "price": "$149 / 月",
-      "detail": "更多資訊",
-      "btn": "注冊並訂購"
-    },
     "deposite": "回收桶會收取200元一次性可退還押金"
   },
   "login": {
@@ -83,5 +69,36 @@
     "email": "電子郵件",
     "phone": "電話/WhatsApp",
     "website": "網站"
+  },
+  "myprofile": {
+    "title": "個人資料",
+    "firstname": "名字",
+    "lastname": "姓氏",
+    "mobile": "手提電話",
+    "email": "電郵地址",
+    "district": "地區",
+    "address": "地址"
+  },
+  "plan": {
+    "plana": {
+      "title": "計劃A",
+      "name": "基本愛回收計劃",
+      "sort": "自行分類整理",
+      "price": "$99 / 月",
+      "detail": "更多資訊",
+      "btn": "注冊並訂購"
+    },
+    "planb": {
+      "title": "計劃B",
+      "name": "簡易愛回收計劃",
+      "sort": "我們收集後代為分類整理",
+      "price": "$149 / 月",
+      "detail": "更多資訊",
+      "btn": "注冊並訂購"
+    }
+  },
+  "changeplan": {
+    "title": "更改計劃",
+    "confirm": "更改"
   }
 }
