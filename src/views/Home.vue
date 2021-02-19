@@ -1,8 +1,8 @@
 <template>
-  <WithFooter background="assets/menu/bg_home.svg">
+  <WithFooter background="/assets/menu/bg_home.svg">
     <div class="pageContent">
       <div class="header">
-        <img src="assets/images/home_header.png" />
+        <img src="/assets/images/home_header.png" />
       </div>
       <div class="content">
         <IonButton

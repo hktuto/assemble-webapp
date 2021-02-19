@@ -2,23 +2,23 @@
   <PageContainer>
     <div class="container">
       <div class="logoContainer">
-        <img src="assets/images/icons/img_logo.png" alt="logo" width="100" />
+        <img src="/assets/images/icons/img_logo.png" alt="logo" width="100" />
       </div>
 
       <ion-slides pager="true" class="slides">
         <ion-slide>
           <div class="slideContainer">
-            <IonImg src="assets/images/slides/s1.png"></IonImg>
+            <IonImg src="/assets/images/slides/s1.png"></IonImg>
           </div>
         </ion-slide>
         <ion-slide>
           <div class="slideContainer">
-            <IonImg src="assets/images/slides/s2.png"></IonImg>
+            <IonImg src="/assets/images/slides/s2.png"></IonImg>
           </div>
         </ion-slide>
         <ion-slide>
           <div class="slideContainer">
-            <IonImg src="assets/images/slides/s3.png"></IonImg>
+            <IonImg src="/assets/images/slides/s3.png"></IonImg>
             <IonButton mode="ios" @click="contuine">
               {{ t("btn.next") }}
             </IonButton>

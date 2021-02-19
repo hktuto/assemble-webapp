@@ -2,7 +2,7 @@
   <IonPage>
     <IonHeader :translucent="true" mode="ios">
       <ion-toolbar>
-        <ion-buttons slot="start">
+        <ion-buttons name="start">
           <ion-back-button :text="t('action.back')"></ion-back-button>
         </ion-buttons>
         <IonTitle>{{ title }}</IonTitle>
