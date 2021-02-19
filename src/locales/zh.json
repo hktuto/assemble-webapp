@@ -10,7 +10,9 @@
     "switch": "中 / Eng"
   },
   "action": {
-    "back": "返回"
+    "back": "返回",
+    "login": "登錄",
+    "next": "下一步"
   },
   "ourservices": {
     "title": "服務",
@@ -41,5 +43,10 @@
     "forgot-password": "忘記密碼",
     "register1": "還未注冊帳號 ?",
     "register2": "按此帳號"
+  },
+  "donation": {
+    "title": "捐款支持",
+    "info": "如果您分享我們的信念和願景，歡迎捐款。您的支持將可幫助我們使這個回收計劃變得可負擔和可持續。",
+    "donate": "你將會捐贈"
   }
 }
