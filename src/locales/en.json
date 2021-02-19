@@ -10,7 +10,8 @@
     "switch": "中 / Eng"
   },
   "action": {
-    "back": "Back"
+    "back": "Back",
+    "login": "Login"
   },
   "ourservices": {
     "title": "Our Services",
@@ -35,5 +36,11 @@
       "btn": "Register And Order"
     },
     "deposite": "A $200 refundable deposit will be charged for the recycling bin"
+  },
+  "login": {
+    "title": "Login",
+    "forgot-password": "Forgot Password",
+    "register1": "Not Registered Yet ?",
+    "register2": "Register Here"
   }
 }

@@ -35,5 +35,11 @@
       "btn": "注冊並訂購"
     },
     "deposite": "回收桶會收取200元一次性可退還押金"
+  },
+  "login": {
+    "title": "登錄",
+    "forgot-password": "忘記密碼",
+    "register1": "還未注冊帳號 ?",
+    "register2": "按此帳號"
   }
 }
