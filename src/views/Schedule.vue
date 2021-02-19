@@ -1,7 +1,7 @@
 <template>
   <WithHeaderFooter>
     <div class="pageContent">
-      Schedule
+      <h1>{{ $t("menu.comingsoon") }}</h1>
     </div>
     <div class="bgContainer"></div>
   </WithHeaderFooter>
