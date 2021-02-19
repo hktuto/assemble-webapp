@@ -5,7 +5,7 @@
         <ion-buttons name="start">
           <ion-back-button :text="t('action.back')"></ion-back-button>
         </ion-buttons>
-        <IonTitle>{{ header }}</IonTitle>
+        <IonTitle color="primary">{{ header }}</IonTitle>
       </ion-toolbar>
     </IonHeader>
     <ion-content :fullscreen="true">
