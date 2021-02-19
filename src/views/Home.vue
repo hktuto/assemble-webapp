@@ -10,7 +10,7 @@
           mode="ios"
           @click="$router.push({ name: 'OurServices' })"
         >
-          {{ t("menu.our_services") }}
+          {{ t("menu.ourservices") }}
         </IonButton>
         <IonButton
           v-if="!isLogin"
@@ -33,7 +33,7 @@
           mode="ios"
           @click="$router.push({ name: 'MyProfile' })"
         >
-          {{ t("menu.my_profile") }}
+          {{ t("menu.myprofile") }}
         </IonButton>
         <IonButton expand="block" mode="ios" @click="share">
           {{ t("menu.share") }}

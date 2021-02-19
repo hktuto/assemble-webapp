@@ -3,7 +3,7 @@
     <IonHeader :translucent="true" mode="ios">
       <ion-toolbar>
         <ion-buttons slot="start">
-          <ion-back-button text=""></ion-back-button>
+          <ion-back-button :text="t('action.back')"></ion-back-button>
         </ion-buttons>
         <IonTitle>{{ title }}</IonTitle>
       </ion-toolbar>
@@ -27,6 +27,7 @@ import {
   IonBackButton,
 } from "@ionic/vue";
 import AppFooter from "@/components/AppFooter.vue";
+import { useI18n } from "vue-i18n";
 export default defineComponent({
   components: {
     IonPage,
@@ -43,6 +44,12 @@ export default defineComponent({
       type: String,
       default: "",
     },
+  },
+  setup() {
+    const { t } = useI18n();
+    return {
+      t,
+    };
   },
 });
 </script>

@@ -1,13 +1,16 @@
 {
   "menu": {
-    "our_services": "Our Services",
+    "ourservices": "Our Services",
     "login": "Login",
     "donation": "Donation",
-    "my_profile": "My Profile",
-    "share": "Share"
+    "myprofile": "My Profile",
+    "share": "Tell A Friend"
   },
   "language": {
     "switch": "中 / Eng"
+  },
+  "action": {
+    "back": "Back"
   },
   "ourservices": {
     "title": "Our Services",
