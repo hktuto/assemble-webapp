@@ -1,5 +1,5 @@
 <template>
-  <WithHeaderFooter background="assets/menu/bg_schedule.svg">
+  <WithHeaderFooter background="/assets/menu/bg_schedule.svg">
     <div class="pageContent">
       <h1>Schedule</h1>
     </div>
