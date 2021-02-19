@@ -30,7 +30,7 @@ export default defineComponent({
 
 <style>
 .pageContent {
-  padding: 20px;
+  padding: 20px 20px 120px 20px;
   height: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -38,7 +38,7 @@ export default defineComponent({
   align-items: center;
 }
 .bgContainer {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   height: 180px;
