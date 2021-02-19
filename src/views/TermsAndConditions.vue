@@ -32,4 +32,10 @@ export default defineComponent({
 });
 </script>
 
-<style></style>
+<style scoped>
+li {
+  font-size: 12px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+</style>

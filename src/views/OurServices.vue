@@ -1,9 +1,6 @@
 <template>
-  <WithHeaderFooter>
+  <WithHeaderFooter :header="t('ourservices.title')">
     <div class="pageContent">
-      <h3 class="header">
-        {{ t("ourservices.title") }}
-      </h3>
       <p>
         <b>
           {{ t("ourservices.slogan1") }}

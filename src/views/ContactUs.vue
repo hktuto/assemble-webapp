@@ -15,7 +15,9 @@
         {{ t("contactus.phone") }} :
         <a href="tel:+85293479770">+852 9347 9770</a>
       </p>
-      <p>{{ t("contactus.website") }} : loverecyclingplus.com</p>
+      <p @click="openWeb">
+        {{ t("contactus.website") }} : loverecyclingplus.com
+      </p>
       <div class="row">
         <IonImg src="/assets/images/fb.png" @click="openFb"></IonImg>
         <a href="https://wa.me/+85293479770">
@@ -42,9 +44,14 @@ export default defineComponent({
       Browser.open({
         url: "https://www.facebook.com/LoveRecyclingPlus/",
       });
+    const openWeb = async () =>
+      Browser.open({
+        url: "http://loverecyclingplus.com/",
+      });
     return {
       t,
       openFb,
+      openWeb,
     };
   },
 });
