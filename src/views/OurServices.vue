@@ -8,9 +8,11 @@
         <b>
           {{ t("ourservices.slogan1") }}
         </b>
+        <br />
         <b>
           {{ t("ourservices.slogan2") }}
         </b>
+        <br />
         <b>
           {{ t("ourservices.slogan3") }}
         </b>
@@ -32,7 +34,7 @@
           <h3 class="titleColor">
             <b>{{ t("ourservices.planb.title") }}</b>
           </h3>
-          <h6>{{ t("ourservices.planb.name") }}}</h6>
+          <h6>{{ t("ourservices.planb.name") }}</h6>
         </IonCol>
 
         <div class="divider"></div>
@@ -75,7 +77,7 @@
         </IonCol>
       </IonRow>
       <IonCol size="12">
-        <small style="text-align:center;">
+        <small style="text-align: center">
           {{ t("ourservices.deposite") }}
         </small>
       </IonCol>
