@@ -2,12 +2,12 @@
   <WithHeaderFooter :header="t('login.title')">
     <div class="pageContent">
       <div class="inputContainer">
-        <IonInput v-model="phone" placeholder="Phone Number"></IonInput>
+        <IonInput v-model="phone" :placeholder="t('login.mobile')"></IonInput>
       </div>
       <div class="inputContainer">
         <IonInput
           v-model="password"
-          placeholder="Password"
+          placeholder="t('login.password')"
           type="password"
         ></IonInput>
       </div>

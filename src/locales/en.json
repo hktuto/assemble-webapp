@@ -16,6 +16,7 @@
     "login": "Login",
     "next": "Next",
     "submit": "Submit",
+    "forgetpassword": "Submit",
     "update": "Update",
     "changeplan": "Change Plan"
   },
@@ -31,7 +32,9 @@
     "title": "Login",
     "forgot-password": "Forgot Password",
     "register1": "Not Registered Yet ?",
-    "register2": "Register Here"
+    "register2": "Register Here",
+    "mobile": "Mobile",
+    "password": "Password"
   },
   "donation": {
     "title": "Donation",
@@ -101,6 +104,10 @@
   "changeplan": {
     "title": "Change Plan",
     "confirm": "Confirm"
+  },
+  "forgetpassword": {
+    "title": "Forgot Password",
+    "mobile": "Phone Number"
   },
   "error": {
     "login": "Login Error"

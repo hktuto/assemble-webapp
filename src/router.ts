@@ -17,6 +17,7 @@ const OurServices = () => import("./views/OurServices.vue");
 const TermsAndConditions = () => import("./views/TermsAndConditions.vue");
 const ContactUs = () => import("./views/ContactUs.vue");
 const ChangePlan = () => import("./views/ChangePlan.vue");
+const ForgetPassword = () => import('./views/ForgetPassword.vue')
 
 const needAuth: NavigationGuard = function(to: any, from: any, next: any) {
   const { isLogin } = useUser();
@@ -109,6 +110,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/ChangePlan",
     name: "ChangePlan",
     component: ChangePlan,
+  },
+  {
+    path: "/ForgetPassword",
+    name: "ForgetPassword",
+    component: ForgetPassword,
   },
 ];
 
