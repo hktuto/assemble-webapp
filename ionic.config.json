@@ -1,0 +1,7 @@
+{
+  "name": "loverecyclingplus",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
