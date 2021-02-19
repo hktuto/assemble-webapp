@@ -12,7 +12,8 @@
   "action": {
     "back": "Back",
     "login": "Login",
-    "next": "Next"
+    "next": "Next",
+    "submit": "Submit"
   },
   "ourservices": {
     "title": "Our Services",
@@ -48,5 +49,16 @@
     "title": "Donation",
     "info": "Your donation will help us make recycling in Hong Kong more available, affordable and sustainable. If you share our vision and belief,we welcome your donations.",
     "donate": "You are donating in"
+  },
+  "register": {
+    "title": "Register",
+    "firstname": "First Name",
+    "lastname": "Last Name",
+    "mobile": "Mobile",
+    "email": "Email",
+    "district": "District",
+    "address": "Address",
+    "password": "Password",
+    "confirmpassword": "Confirm Password"
   }
 }

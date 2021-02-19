@@ -12,7 +12,8 @@
   "action": {
     "back": "返回",
     "login": "登錄",
-    "next": "下一步"
+    "next": "下一步",
+    "submit": "注冊"
   },
   "ourservices": {
     "title": "服務",
@@ -48,5 +49,16 @@
     "title": "捐款支持",
     "info": "如果您分享我們的信念和願景，歡迎捐款。您的支持將可幫助我們使這個回收計劃變得可負擔和可持續。",
     "donate": "你將會捐贈"
+  },
+  "register": {
+    "title": "注冊",
+    "firstname": "名字",
+    "lastname": "姓氏",
+    "mobile": "手提電話",
+    "email": "電郵地址",
+    "district": "地區",
+    "address": "地址",
+    "password": "密碼",
+    "confirmpassword": "確認密碼"
   }
 }
