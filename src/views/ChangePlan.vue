@@ -2,25 +2,8 @@
   <WithHeaderFooter>
     <div class="pageContent">
       <h3>
-        <b>{{ t("ourservices.title") }}</b>
+        <b>{{ t("changeplan.title") }}</b>
       </h3>
-      <p>
-        <b>
-          {{ t("ourservices.slogan1") }}
-        </b>
-        <br />
-        <b>
-          {{ t("ourservices.slogan2") }}
-        </b>
-        <br />
-        <b>
-          {{ t("ourservices.slogan3") }}
-        </b>
-      </p>
-
-      <p>
-        {{ t("ourservices.notice") }}
-      </p>
       <IonRow>
         <IonCol size="6">
           <h3 class="titleColor">
@@ -65,21 +48,11 @@
             {{ t("plan.planb.detail") }}
           </small>
         </IonCol>
-        <IonCol size="6">
-          <IonButton size="small" mode="ios">
-            {{ t("plan.plana.btn") }}
-          </IonButton>
-        </IonCol>
-        <IonCol size="6">
-          <IonButton size="small" mode="ios">
-            {{ t("plan.planb.btn") }}
-          </IonButton>
-        </IonCol>
       </IonRow>
       <IonCol size="12">
-        <small style="text-align: center">
-          {{ t("ourservices.deposite") }}
-        </small>
+        <IonButton expand="block" mode="ios" @click="share">
+          {{ t("changeplan.confirm") }}
+        </IonButton>
       </IonCol>
     </div>
     <div class="bgContainer"></div>
