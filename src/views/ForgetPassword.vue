@@ -1,18 +1,13 @@
 <template>
-  <WithHeaderFooter :header="t('login.title')">
+  <WithHeaderFooter
+    background="/assets/menu/bg_howto.svg"
+    :header="t('forgetpassword.title')"
+  >
     <div class="pageContent">
-      <IonInput :placeholder="t('login.mobile')"></IonInput>
-      <IonInput :placeholder="t('login.password')"></IonInput>
+      <IonInput placeholder="Phone Number"></IonInput>
       <IonButton mode="ios">
-        {{ t("action.login") }}
+        {{ t("action.forgetpassword") }}
       </IonButton>
-      <span>
-        {{ t("login.forgot-password") }}
-      </span>
-      <span>
-        {{ t("login.register1") }}
-        {{ t("login.register2") }}
-      </span>
     </div>
     <div class="bgContainer"></div>
   </WithHeaderFooter>
@@ -21,8 +16,9 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import WithHeaderFooter from "@/layout/WithHeaderFooter.vue";
-import { IonInput, IonButton } from "@ionic/vue";
 import { useI18n } from "vue-i18n";
+import { IonInput, IonButton } from "@ionic/vue";
+
 export default defineComponent({
   components: { WithHeaderFooter, IonInput, IonButton },
   setup() {
@@ -34,8 +30,4 @@ export default defineComponent({
 });
 </script>
 
-<style>
-.header {
-  align-self: flex-start;
-}
-</style>
+<style></style>

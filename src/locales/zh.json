@@ -15,6 +15,7 @@
     "login": "登錄",
     "next": "下一步",
     "submit": "注冊",
+    "forgetpassword": "找回",
     "update": "更新",
     "changeplan": "更改計劃"
   },
@@ -30,7 +31,9 @@
     "title": "登錄",
     "forgot-password": "忘記密碼",
     "register1": "還未注冊帳號 ?",
-    "register2": "按此帳號"
+    "register2": "按此帳號",
+    "mobile": "手提電話",
+    "password": "密碼"
   },
   "donation": {
     "title": "捐款支持",
@@ -100,5 +103,9 @@
   "changeplan": {
     "title": "更改計劃",
     "confirm": "更改"
+  },
+  "forgetpassword": {
+    "title": "忘記密碼",
+    "mobile": "手提電話"
   }
 }
