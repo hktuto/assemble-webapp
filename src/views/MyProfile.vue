@@ -1,7 +1,6 @@
 <template>
   <WithHeaderFooter>
-    <div class="pageContent">
-      <h3 class="header">{{ t("myprofile.title") }}</h3>
+    <div class="pageContent" :header="t('myprofile.title')">
       <IonInput :placeholder="t('myprofile.firstname')"></IonInput>
       <IonInput :placeholder="t('myprofile.lastname')"></IonInput>
       <IonInput :placeholder="t('myprofile.mobile')"></IonInput>

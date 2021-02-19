@@ -1,7 +1,9 @@
 <template>
-  <WithHeaderFooter background="/assets/menu/bg_howto.svg">
+  <WithHeaderFooter
+    :header="t('terms.title')"
+    background="/assets/menu/bg_howto.svg"
+  >
     <div class="pageContent">
-      <h3 class="header">{{ t("terms.title") }}</h3>
       <ol>
         <li>{{ t("terms.t1") }}</li>
         <li>{{ t("terms.t2") }}</li>

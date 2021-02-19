@@ -1,7 +1,6 @@
 <template>
-  <WithHeaderFooter>
+  <WithHeaderFooter :header="t('login.title')">
     <div class="pageContent">
-      <h3 class="header">{{ t("login.title") }}</h3>
       <IonInput placeholder="Phone Number"></IonInput>
       <IonInput placeholder="Password"></IonInput>
       <IonButton mode="ios">

@@ -1,7 +1,7 @@
 <template>
   <WithHeaderFooter background="/assets/menu/bg_schedule.svg">
     <div class="pageContent">
-      <h1>Schedule</h1>
+      <h1>coming soon</h1>
     </div>
     <div class="bgContainer"></div>
   </WithHeaderFooter>

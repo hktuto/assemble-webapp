@@ -1,9 +1,11 @@
 <template>
-  <WithHeaderFooter background="/assets/menu/bg_howto.svg">
+  <WithHeaderFooter
+    background="/assets/menu/bg_howto.svg"
+    :header="t('howto.title')"
+  >
     <div class="pageContent">
       <div class="logoContainer left">
         <IonImg src="/assets/images/icons/img_logo.png" />
-        <h3 class="header">{{ t("howto.title") }}</h3>
       </div>
       <IonImg src="/assets/images/types-of-bin3.png" @click="goDetail"></IonImg>
     </div>

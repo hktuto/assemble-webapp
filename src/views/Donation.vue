@@ -1,7 +1,6 @@
 <template>
-  <WithHeaderFooter>
+  <WithHeaderFooter :header="t('donation.title')">
     <div class="pageContent">
-      <h3 class="header">{{ t("donation.title") }}</h3>
       <p>{{ t("donation.info") }}</p>
       <p>{{ t("donation.donate") }}</p>
       <IonButton mode="ios">

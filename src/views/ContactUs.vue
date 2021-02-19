@@ -1,7 +1,6 @@
 <template>
-  <WithHeaderFooter>
+  <WithHeaderFooter :header="t('contactus.title')">
     <div class="pageContent">
-      <h3 class="header">{{ t("contactus.title") }}</h3>
       <p>{{ t("contactus.companyname") }}</p>
       <p>{{ t("contactus.address1") }}</p>
       <p>{{ t("contactus.address2") }}</p>

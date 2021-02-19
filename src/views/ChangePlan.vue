@@ -1,9 +1,6 @@
 <template>
-  <WithHeaderFooter>
+  <WithHeaderFooter :header="t('changeplan.title')">
     <div class="pageContent">
-      <h3>
-        <b>{{ t("changeplan.title") }}</b>
-      </h3>
       <IonRow>
         <IonCol size="6">
           <h3 class="titleColor">
@@ -50,7 +47,7 @@
         </IonCol>
       </IonRow>
       <IonCol size="12">
-        <IonButton expand="block" mode="ios" @click="share">
+        <IonButton expand="block" mode="ios" @click="changePlan">
           {{ t("changeplan.confirm") }}
         </IonButton>
       </IonCol>
@@ -68,8 +65,12 @@ export default defineComponent({
   components: { WithHeaderFooter, IonButton, IonRow, IonCol },
   setup() {
     const { t } = useI18n();
+    const changePlan = async () => {
+      await console.log("change plan");
+    };
     return {
       t,
+      changePlan,
     };
   },
 });
