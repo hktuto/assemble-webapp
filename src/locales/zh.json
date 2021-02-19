@@ -14,7 +14,9 @@
     "back": "返回",
     "login": "登錄",
     "next": "下一步",
-    "submit": "注冊"
+    "submit": "注冊",
+    "update": "更新",
+    "changeplan": "更改計劃"
   },
   "ourservices": {
     "title": "服務",
@@ -83,5 +85,14 @@
     "email": "電子郵件",
     "phone": "電話/WhatsApp",
     "website": "網站"
+  },
+  "myprofile": {
+    "title": "個人資料",
+    "firstname": "名字",
+    "lastname": "姓氏",
+    "mobile": "手提電話",
+    "email": "電郵地址",
+    "district": "地區",
+    "address": "地址"
   }
 }

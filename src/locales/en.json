@@ -14,7 +14,9 @@
     "back": "Back",
     "login": "Login",
     "next": "Next",
-    "submit": "Submit"
+    "submit": "Submit",
+    "update": "Update",
+    "changeplan": "Change Plan"
   },
   "ourservices": {
     "title": "Our Services",
@@ -83,5 +85,14 @@
     "email": "Email",
     "phone": "Phone/WhatsApp",
     "website": "Website"
+  },
+  "myprofile": {
+    "title": "Profile",
+    "firstname": "First Name",
+    "lastname": "Last Name",
+    "mobile": "Mobile",
+    "email": "Email",
+    "district": "District",
+    "address": "Address"
   }
 }
