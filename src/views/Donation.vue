@@ -1,7 +1,12 @@
 <template>
   <WithHeaderFooter>
     <div class="pageContent">
-      Donation
+      <h3 class="header">{{ t("donation.title") }}</h3>
+      <p>{{ t("donation.info") }}</p>
+      <p>{{ t("donation.donate") }}</p>
+      <IonButton mode="ios">
+        {{ t("action.next") }}
+      </IonButton>
     </div>
     <div class="bgContainer"></div>
   </WithHeaderFooter>
@@ -10,8 +15,16 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import WithHeaderFooter from "@/layout/WithHeaderFooter.vue";
+import { useI18n } from "vue-i18n";
+import { IonButton } from "@ionic/vue";
 export default defineComponent({
-  components: { WithHeaderFooter },
+  components: { WithHeaderFooter, IonButton },
+  setup() {
+    const { t } = useI18n();
+    return {
+      t,
+    };
+  },
 });
 </script>
 
