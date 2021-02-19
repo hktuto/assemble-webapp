@@ -2,27 +2,55 @@
   <IonFooter>
     <div class="footerContainer">
       <div class="menuItem" @click="$router.push({ name: 'Home' })">
-        <div class="iconContainer">
-          <IonIcon />
+        <div :class="{ iconContainer: true, selected: $route.name === 'Home' }">
+          <IonIcon
+            :src="
+              `assets/menu/${$route.name === 'Home' ? 'selected_' : ''}home.svg`
+            "
+          />
         </div>
 
         <label>Home</label>
       </div>
       <div class="menuItem" @click="$router.push({ name: 'HowTo' })">
-        <div class="iconContainer">
-          <IonIcon />
+        <div
+          :class="{ iconContainer: true, selected: $route.name === 'HowTo' }"
+        >
+          <IonIcon
+            :src="
+              `assets/menu/${
+                $route.name === 'HowTo' ? 'selected_' : ''
+              }howto.svg`
+            "
+          />
         </div>
         <label>How To</label>
       </div>
       <div class="menuItem" @click="$router.push({ name: 'Schedule' })">
-        <div class="iconContainer">
-          <IonIcon />
+        <div
+          :class="{ iconContainer: true, selected: $route.name === 'Schedule' }"
+        >
+          <IonIcon
+            :src="
+              `assets/menu/${
+                $route.name === 'Schedule' ? 'selected_' : ''
+              }schedule.svg`
+            "
+          />
         </div>
         <label>Schedule</label>
       </div>
       <div class="menuItem" @click="$router.push({ name: 'AboutUs' })">
-        <div class="iconContainer">
-          <IonIcon />
+        <div
+          :class="{ iconContainer: true, selected: $route.name === 'AboutUs' }"
+        >
+          <IonIcon
+            :src="
+              `assets/menu/${
+                $route.name === 'AboutUs' ? 'selected_' : ''
+              }aboutus.svg`
+            "
+          />
         </div>
         <label>About Us</label>
       </div>
@@ -65,7 +93,7 @@ export default defineComponent({
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 40px 20px 10px 20px;
+  padding: 40px 25px 10px 25px;
   background-repeat: no-repeat;
   background-position: center bottom;
 }
@@ -89,7 +117,7 @@ export default defineComponent({
 }
 .bg_container {
   width: 100%;
-  height: 120px;
+  height: 110px;
   z-index: -1;
   position: absolute;
   top: 0;
@@ -103,6 +131,17 @@ export default defineComponent({
   width: 40px;
   height: 40px;
   border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.iconContainer ion-icon {
+  width: 20px;
+  height: 20px;
+}
+.iconContainer.selected {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 label {
   font-size: 12px;
