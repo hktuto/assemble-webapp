@@ -970,6 +970,13 @@
   resolved "https://registry.yarnpkg.com/@intlify/shared/-/shared-9.0.0-rc.7.tgz#4bab9e58bbb09bc690fd953d1e83d9026e3a3893"
   integrity sha512-ynMHCCcBPtQAdJlOUMzrlvUp+DdKlnB0yrkPPMzAs8bBETwJbAK1Jq6zBHlMZzscPcF+1ia5pj4Gmmn7QL9b8w==
 
+"@ionic-native/in-app-browser@^5.31.1":
+  version "5.31.1"
+  resolved "https://registry.yarnpkg.com/@ionic-native/in-app-browser/-/in-app-browser-5.31.1.tgz#207df353e6b8d433f57eb9d38497582fbc4dcd7c"
+  integrity sha512-/J5hCJKu7EjwZUoapjj2bQ1GIF2K3KGx0oT+8V9Tw0xoxuxDGaAn8eaWYRtUukimciHU1I8oQWtcIiN8yraQPQ==
+  dependencies:
+    "@types/cordova" latest
+
 "@ionic-native/stripe@^5.31.1":
   version "5.31.1"
   resolved "https://registry.yarnpkg.com/@ionic-native/stripe/-/stripe-5.31.1.tgz#5961fbee1c2739b165ce16148a74668b27a361cd"
@@ -3611,11 +3618,6 @@ copy-webpack-plugin@^5.1.1:
     schema-utils "^1.0.0"
     serialize-javascript "^4.0.0"
     webpack-log "^2.0.0"
-
-cordova-plugin-stripe@^1.5.3:
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/cordova-plugin-stripe/-/cordova-plugin-stripe-1.5.3.tgz#62aae5b4ef0d0f4621d0e8498658a55b5133408c"
-  integrity sha1-YqrltO8ND0Yh0OhJhlilW1EzQIw=
 
 core-js-compat@^3.6.5, core-js-compat@^3.8.0:
   version "3.9.0"
@@ -8961,13 +8963,6 @@ public-encrypt@^4.0.0:
     parse-asn1 "^5.0.0"
     randombytes "^2.0.1"
     safe-buffer "^5.1.2"
-
-pug-plain-loader@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/pug-plain-loader/-/pug-plain-loader-1.1.0.tgz#59f3b475284871afcd6a18d2ad3318b150fdc533"
-  integrity sha512-1nYgIJLaahRuHJHhzSPODV44aZfb00bO7kiJiMkke6Hj4SVZftuvx6shZ4BOokk50dJc2RSFqNUBOlus0dniFQ==
-  dependencies:
-    loader-utils "^1.1.0"
 
 pump@^2.0.0:
   version "2.0.1"
