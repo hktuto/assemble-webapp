@@ -12,13 +12,12 @@
   "dependencies": {
     "@capacitor/core": "^2.4.6",
     "@capacitor/ios": "2.4.6",
+    "@ionic-native/in-app-browser": "^5.31.1",
     "@ionic-native/stripe": "^5.31.1",
     "@ionic/vue": "^5.4.0",
     "@ionic/vue-router": "^5.4.0",
     "axios": "^0.21.1",
-    "cordova-plugin-stripe": "^1.5.3",
     "core-js": "^3.6.5",
-    "pug-plain-loader": "^1.1.0",
     "vue": "^3.0.0-0",
     "vue-i18n": "^9.0.0-rc.7",
     "vue-router": "^4.0.0-0"
