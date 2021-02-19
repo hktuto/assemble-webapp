@@ -238,6 +238,6 @@ http://ionicframework.com/docs/theming/ */
 ion-button {
   --border-radius: 25px;
   color: #000;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-weight: 700;
 }
