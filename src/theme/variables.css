@@ -241,6 +241,9 @@ ion-button {
   /* text-transform: uppercase; */
   font-weight: 700;
 }
+ion-button.button-block {
+  width: 100%;
+}
 .button-small {
   font-size: 12px;
   font-weight: 300;

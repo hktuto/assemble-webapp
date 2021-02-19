@@ -60,4 +60,11 @@ export default defineComponent({
 .logoContainer img {
   max-height: 60px;
 }
+.inputContainer {
+  width: 100%;
+  padding: 0px 10px;
+  border-radius: 25px;
+  border: 1px solid var(--ion-color-primary);
+  margin-bottom: 10px;
+}
 </style>

@@ -3,9 +3,10 @@
     "ourservices": "服務",
     "login": "登錄",
     "donation": "捐款",
-    "myprofile": "我等賬戶",
+    "myprofile": "我的賬戶",
     "share": "分享",
-    "aboutus": "關於我們"
+    "aboutus": "關於我們",
+    "logout": "登出"
   },
   "language": {
     "switch": "中 / Eng"
@@ -100,5 +101,8 @@
   "changeplan": {
     "title": "更改計劃",
     "confirm": "更改"
+  },
+  "error": {
+    "login": "登入錯誤"
   }
 }

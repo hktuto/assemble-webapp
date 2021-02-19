@@ -5,7 +5,8 @@
     "donation": "Donation",
     "myprofile": "My Profile",
     "share": "Tell A Friend",
-    "aboutus": "About Us"
+    "aboutus": "About Us",
+    "logout": "Logout"
   },
   "language": {
     "switch": "中 / Eng"
@@ -100,5 +101,8 @@
   "changeplan": {
     "title": "Change Plan",
     "confirm": "Confirm"
+  },
+  "error": {
+    "login": "Login Error"
   }
 }

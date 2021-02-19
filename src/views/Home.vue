@@ -6,6 +6,7 @@
       </div>
       <div class="content">
         <IonButton
+          v-if="!isLogin"
           expand="block"
           mode="ios"
           @click="$router.push({ name: 'OurServices' })"
@@ -38,6 +39,9 @@
         <IonButton expand="block" mode="ios" @click="share">
           {{ t("menu.share") }}
         </IonButton>
+        <IonButton v-if="isLogin" expand="block" mode="ios" @click="logout">
+          {{ t("menu.logout") }}
+        </IonButton>
         <IonButton
           class="language"
           size="small"
@@ -69,7 +73,7 @@ export default defineComponent({
     IonButton,
   },
   setup() {
-    const { isLogin } = useUser();
+    const { isLogin, logout } = useUser();
     const { locale, t } = useI18n();
     const share = async () =>
       await Share.share({
@@ -86,6 +90,7 @@ export default defineComponent({
       share,
       switchLanguage,
       t,
+      logout,
     };
   },
 });

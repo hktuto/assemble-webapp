@@ -1,9 +1,11 @@
 <template>
-  <WithHeaderFooter background="/assets/menu/bg_aboutus.svg">
+  <WithHeaderFooter
+    background="/assets/menu/bg_aboutus.svg"
+    :header="t('menu.aboutus')"
+  >
     <div class="pageContent">
       <div class="logoContainer left">
         <IonImg src="/assets/images/icons/img_logo.png" />
-        <h3 class="header">{{ t("menu.aboutus") }}</h3>
       </div>
 
       <div class="content">
