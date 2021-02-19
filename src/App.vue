@@ -49,4 +49,15 @@ export default defineComponent({
   z-index: -1;
   overflow: visible;
 }
+
+.logoContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.logoContainer img {
+  max-height: 60px;
+}
 </style>
