@@ -1,8 +1,8 @@
 <template>
   <WithHeaderFooter>
     <div class="pageContent">
-      <h3>
-        <b>{{ t("ourservices.title") }}</b>
+      <h3 class="header">
+        {{ t("ourservices.title") }}
       </h3>
       <p>
         <b>
