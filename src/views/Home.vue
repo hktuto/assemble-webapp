@@ -38,7 +38,12 @@
         <IonButton expand="block" mode="ios" @click="share">
           {{ t("menu.share") }}
         </IonButton>
-        <IonButton size="small" mode="ios" @click="switchLanguage">
+        <IonButton
+          class="language"
+          size="small"
+          mode="ios"
+          @click="switchLanguage"
+        >
           {{ t("language.switch") }}
         </IonButton>
       </div>
@@ -91,12 +96,12 @@ export default defineComponent({
   flex-grow: 1;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
   padding: 20px;
 }
-.content > * {
+.content > .button-block {
   width: 100%;
   margin: 5px 0;
 }
