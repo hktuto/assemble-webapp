@@ -5,7 +5,7 @@
         <ion-buttons name="start">
           <ion-back-button :text="t('action.back')"></ion-back-button>
         </ion-buttons>
-        <IonTitle>{{ title }}</IonTitle>
+        <IonTitle>{{ header }}</IonTitle>
       </ion-toolbar>
     </IonHeader>
     <ion-content :fullscreen="true">
@@ -40,7 +40,7 @@ export default defineComponent({
     IonBackButton,
   },
   props: {
-    title: {
+    header: {
       type: String,
       default: "",
     },
