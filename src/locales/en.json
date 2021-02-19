@@ -72,5 +72,15 @@
     "t4": "Please leave your recycling bin where we can reach it preferably by your gate,if we cannot find your bin we cannot collect. You may have to wait until the next collection, there will be no refund for this.",
     "t5": "Under severe weather warnings such asTyphoon warning 8 or above, Red or Black rain warning, we may defer or cancel your collection.",
     "t6": "LoveRecyclingPlus reserved all rights"
+  },
+  "contactus": {
+    "title": "Contact Us",
+    "companyname": "Love Recycling Plus",
+    "address1": "BO9 2/F Kin Tak Fung Industrial Building",
+    "address2": "174 Wai Yip Street Kwun Tong",
+    "address3": "Hong Kong",
+    "email": "Email",
+    "phone": "Phone/WhatsApp",
+    "website": "Website"
   }
 }
