@@ -20,7 +20,7 @@
           <div class="slideContainer">
             <IonImg src="/assets/images/slides/s3.png"></IonImg>
             <IonButton mode="ios" @click="contuine">
-              {{ t("btn.next") }}
+              {{ t("action.next") }}
             </IonButton>
           </div>
         </ion-slide>
