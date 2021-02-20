@@ -74,4 +74,12 @@ export default defineComponent({
   justify-content: flex-start;
   align-items: center;
 }
+
+.ion-page {
+  max-width: 640px;
+  margin: 0 auto;
+}
+body {
+  background-color: #fff;
+}
 </style>
