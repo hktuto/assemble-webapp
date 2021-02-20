@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">lovere cycling plus</string>
-    <string name="title_activity_main">lovere cycling plus</string>
+    <string name="app_name">Love Recycling Plus</string>
+    <string name="title_activity_main">Love Recycling Plus</string>
     <string name="package_name">com.loverecyclingplus</string>
     <string name="custom_url_scheme">com.loverecyclingplus</string>
 </resources>

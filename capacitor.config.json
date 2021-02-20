@@ -1,6 +1,6 @@
 {
   "appId": "com.loverecyclingplus",
-  "appName": "lovere cycling plus",
+  "appName": "Love Recycling Plus",
   "bundledWebRuntime": false,
   "npmClient": "yarn",
   "webDir": "dist",
