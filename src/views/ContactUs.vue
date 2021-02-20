@@ -61,4 +61,8 @@ export default defineComponent({
 .row {
   display: flex;
 }
+.pageContent {
+  text-align: left;
+  align-items: flex-start;
+}
 </style>

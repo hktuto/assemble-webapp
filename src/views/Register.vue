@@ -1,16 +1,59 @@
 <template>
-  <WithHeaderFooter>
+  <WithHeaderFooter :header="t('register.title')">
     <div class="pageContent">
-      <h3 class="header">{{ t("register.title") }}</h3>
-      <IonInput :placeholder="t('register.firstname')"></IonInput>
-      <IonInput :placeholder="t('register.lastname')"></IonInput>
-      <IonInput :placeholder="t('register.mobile')"></IonInput>
-      <IonInput :placeholder="t('register.email')"></IonInput>
-      <IonInput :placeholder="t('register.district')"></IonInput>
-      <IonTextarea :placeholder="t('register.address')"></IonTextarea>
-      <IonInput :placeholder="t('register.password')"></IonInput>
-      <IonInput :placeholder="t('register.confirmpassword')"></IonInput>
-      <IonButton mode="ios">
+      <div class="inputContainer">
+        <IonInput
+          :placeholder="t('register.firstname')"
+          v-model="firstname"
+        ></IonInput>
+      </div>
+      <div class="inputContainer">
+        <IonInput
+          :placeholder="t('register.lastname')"
+          v-model="lastname"
+        ></IonInput>
+      </div>
+      <div class="inputContainer">
+        <IonInput :placeholder="t('register.phone')" v-model="phone"></IonInput>
+      </div>
+      <div class="inputContainer">
+        <IonInput :placeholder="t('register.email')" v-model="email"></IonInput>
+      </div>
+      <div class="inputContainer">
+        <IonSelect
+          mode="ios"
+          :placeholder="t('register.district')"
+          v-model="district"
+        >
+          <ion-select-option
+            v-for="item in districts"
+            :key="item.id"
+            :value="item.id"
+            >{{ item.district_name }}</ion-select-option
+          >
+        </IonSelect>
+      </div>
+      <div class="inputContainer">
+        <IonTextarea
+          :placeholder="t('register.address')"
+          v-model="address"
+        ></IonTextarea>
+      </div>
+      <div class="inputContainer">
+        <IonInput
+          type="password"
+          :placeholder="t('register.password')"
+          v-model="password"
+        ></IonInput>
+      </div>
+      <div class="inputContainer">
+        <IonInput
+          type="password"
+          :placeholder="t('register.confirmpassword')"
+          v-model="confirmPassword"
+        ></IonInput>
+      </div>
+      <IonButton mode="ios" expand="block" @click="submit">
         {{ t("action.submit") }}
       </IonButton>
     </div>
@@ -19,16 +62,91 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, reactive, toRefs, ref } from "vue";
 import WithHeaderFooter from "@/layout/WithHeaderFooter.vue";
 import { useI18n } from "vue-i18n";
-import { IonInput, IonTextarea, IonButton } from "@ionic/vue";
+import {
+  IonInput,
+  IonTextarea,
+  IonButton,
+  IonSelect,
+  IonSelectOption,
+} from "@ionic/vue";
+
+import useUser, { RegisterForm } from "@/state/useUser";
+
+import { Plugins } from "@capacitor/core";
+import { useApp } from "@/state/useApp";
+import { useRouter } from "vue-router";
+const { Toast } = Plugins;
+
 export default defineComponent({
-  components: { WithHeaderFooter, IonInput, IonTextarea, IonButton },
+  components: {
+    WithHeaderFooter,
+    IonInput,
+    IonTextarea,
+    IonButton,
+    IonSelect,
+    IonSelectOption,
+  },
   setup() {
     const { t } = useI18n();
+    const { districts } = useApp();
+    const { register } = useUser();
+    const router = useRouter();
+    const registerForm = reactive<RegisterForm>({
+      firstname: "",
+      lastname: "",
+      password: "",
+      phone: "",
+      email: "",
+      address: "",
+      district: "",
+    });
+    const confirmPassword = ref("");
+
+    const validate = () => {
+      const missingField = [];
+      for (const [key, value] of Object.entries(registerForm)) {
+        if (!value) {
+          missingField.push(t(`register.${key}`));
+        }
+      }
+
+      if (missingField.length > 0) {
+        throw t("error.missingField", { field: missingField.join(",") });
+      }
+    };
+
+    const checkPassword = () => {
+      if (registerForm.password !== confirmPassword.value) {
+        throw t("error.confirmPassword");
+      }
+    };
+
+    const submit = async () => {
+      try {
+        await validate();
+        await checkPassword();
+        await register(registerForm);
+        router.push({ name: "OTP" });
+        Toast.show({
+          text: t("otp.send"),
+        });
+      } catch (error) {
+        console.log(error);
+        Toast.show({
+          text: error,
+        });
+      }
+    };
     return {
+      ...toRefs(registerForm),
+      confirmPassword,
+      districts,
       t,
+      registerForm,
+      submit,
     };
   },
 });

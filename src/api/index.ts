@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "https://loverecyclingplus.com/recycling/api/";
+export const baseURL = "https://loverecyclingplus.com/recycling/api/";
 
 export const apiService = axios.create({
   baseURL,

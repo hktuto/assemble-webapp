@@ -45,7 +45,7 @@
     "title": "Register",
     "firstname": "First Name",
     "lastname": "Last Name",
-    "mobile": "Mobile",
+    "phone": "Mobile",
     "email": "Email",
     "district": "District",
     "address": "Address",
@@ -99,7 +99,12 @@
       "price": "$149 / month",
       "detail": "More details",
       "btn": "Register And Order"
-    }
+    },
+    "title": "Plan",
+    "recyclingBin": {
+      "deposit": "Recycling Bin Deposit"
+    },
+    "total": "Total"
   },
   "changeplan": {
     "title": "Change Plan",
@@ -110,6 +115,12 @@
     "mobile": "Phone Number"
   },
   "error": {
-    "login": "Login Error"
+    "login": "Login Error",
+    "missingField": "{field} is missing",
+    "confirmPassword": "Password and Confirm Password nt matching"
+  },
+  "otp": {
+    "title": "Validate Email",
+    "send": " User created successfully! OTP sent to your email address. Please enter the OTP to validate."
   }
 }

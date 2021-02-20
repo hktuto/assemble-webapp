@@ -60,7 +60,7 @@
 import { defineComponent } from "vue";
 import { IonButton } from "@ionic/vue";
 import WithFooter from "@/layout/WithFooter.vue";
-import { useUser } from "@/state/useUser";
+import useUser from "@/state/useUser";
 
 import { Plugins } from "@capacitor/core";
 import { useI18n } from "vue-i18n";

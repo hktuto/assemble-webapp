@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "@ionic/vue-router";
 import { NavigationGuard, RouteRecordRaw } from "vue-router";
 import { useApp } from "./state/useApp";
-import { useUser } from "./state/useUser";
+import useUser from "./state/useUser";
 // import { useUser } from "./state/useUser";
 import Home from "./views/Home.vue";
 import Landing from "./views/Landing.vue";
@@ -17,7 +17,9 @@ const OurServices = () => import("./views/OurServices.vue");
 const TermsAndConditions = () => import("./views/TermsAndConditions.vue");
 const ContactUs = () => import("./views/ContactUs.vue");
 const ChangePlan = () => import("./views/ChangePlan.vue");
-const ForgetPassword = () => import('./views/ForgetPassword.vue')
+const ForgetPassword = () => import("./views/ForgetPassword.vue");
+const OTP = () => import("./views/otp.vue");
+const RegisterPayment = () => import("./views/RegisterPayment.vue");
 
 const needAuth: NavigationGuard = function(to: any, from: any, next: any) {
   const { isLogin } = useUser();
@@ -64,6 +66,16 @@ const routes: Array<RouteRecordRaw> = [
     path: "/Register",
     name: "Register",
     component: Register,
+  },
+  {
+    name: "OTP",
+    path: "/OTP",
+    component: OTP,
+  },
+  {
+    name: "RegisterPayment",
+    path: "/RegisterPayment",
+    component: RegisterPayment,
   },
   {
     path: "/Donation",

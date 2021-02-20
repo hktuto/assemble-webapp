@@ -17,9 +17,10 @@ export default defineComponent({
     IonRouterOutlet,
   },
   setup() {
-    const { init } = useApp();
+    const { init, getDistrict } = useApp();
     const { locale } = useI18n({ useScope: "global" });
     locale.value = localStorage.getItem("appLocale") || "en";
+    getDistrict();
     return {
       init,
       locale,
@@ -30,8 +31,8 @@ export default defineComponent({
 
 <style>
 .pageContent {
-  padding: 20px 20px 120px 20px;
-  height: 100%;
+  padding: 20px;
+  /* height: 100%; */
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -66,5 +67,11 @@ export default defineComponent({
   border-radius: 25px;
   border: 1px solid var(--ion-color-primary);
   margin-bottom: 10px;
+  background-color: #fff;
+  min-height: 50px;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 </style>

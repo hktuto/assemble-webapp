@@ -4,6 +4,9 @@
   "bundledWebRuntime": false,
   "npmClient": "yarn",
   "webDir": "dist",
+  "server": {
+    "url": "http://10.0.11.12:8080/"
+  },
   "plugins": {
     "SplashScreen": {
       "launchShowDuration": 0

@@ -7,7 +7,7 @@
       <div class="inputContainer">
         <IonInput
           v-model="password"
-          placeholder="t('login.password')"
+          :placeholder="t('login.password')"
           type="password"
         ></IonInput>
       </div>
@@ -18,7 +18,8 @@
       <span @click="$router.push({ name: 'ForgetPassword' })">
         {{ t("login.forgot-password") }}
       </span>
-      <span @click="$router.push({ name: 'Register' })">
+      <hr />
+      <span @click="$router.push({ name: 'OurServices' })">
         {{ t("login.register1") }}
         {{ t("login.register2") }}
       </span>
@@ -32,7 +33,7 @@ import { defineComponent, ref } from "vue";
 import WithHeaderFooter from "@/layout/WithHeaderFooter.vue";
 import { IonInput, IonButton } from "@ionic/vue";
 import { useI18n } from "vue-i18n";
-import { useUser } from "@/state/useUser";
+import useUser from "@/state/useUser";
 import { Plugins } from "@capacitor/core";
 import { useRouter } from "vue-router";
 

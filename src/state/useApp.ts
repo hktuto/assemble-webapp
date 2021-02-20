@@ -1,8 +1,10 @@
+import { apiService } from "@/api";
 import { reactive, toRefs } from "vue";
 
 const state = reactive({
   firstLunched: true,
   locale: "en",
+  districts: [] as any[],
 });
 
 export function useApp() {
@@ -20,9 +22,17 @@ export function useApp() {
     state.firstLunched = boo;
   };
 
+  const getDistrict = async () => {
+    const {
+      data: { district },
+    } = await apiService.post("/UserPanel/get_district");
+    state.districts = district;
+  };
+
   return {
     ...toRefs(state),
     init,
     setFirstLunch,
+    getDistrict,
   };
 }

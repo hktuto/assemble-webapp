@@ -63,12 +63,12 @@
           </small>
         </IonCol>
         <IonCol size="6">
-          <IonButton size="small" mode="ios">
+          <IonButton size="small" mode="ios" @click="register(99)">
             {{ t("plan.plana.btn") }}
           </IonButton>
         </IonCol>
         <IonCol size="6">
-          <IonButton size="small" mode="ios">
+          <IonButton size="small" mode="ios" @click="register(149)">
             {{ t("plan.planb.btn") }}
           </IonButton>
         </IonCol>
@@ -88,12 +88,22 @@ import { defineComponent } from "vue";
 import { IonButton, IonRow, IonCol } from "@ionic/vue";
 import WithHeaderFooter from "@/layout/WithHeaderFooter.vue";
 import { useI18n } from "vue-i18n";
+import useUser from "@/state/useUser";
+import { useRouter } from "vue-router";
 export default defineComponent({
   components: { WithHeaderFooter, IonButton, IonRow, IonCol },
   setup() {
     const { t } = useI18n();
+    const { plan } = useUser();
+    const router = useRouter();
+    const register = (pickPlan: number) => {
+      plan.value = pickPlan;
+      router.push({ name: "Register" });
+    };
     return {
       t,
+      plan,
+      register,
     };
   },
 });

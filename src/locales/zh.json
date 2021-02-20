@@ -15,7 +15,7 @@
     "back": "返回",
     "login": "登錄",
     "next": "下一步",
-    "submit": "注冊",
+    "submit": "提交",
     "forgetpassword": "找回",
     "update": "更新",
     "changeplan": "更改計劃"
@@ -45,7 +45,7 @@
     "title": "注冊",
     "firstname": "名字",
     "lastname": "姓氏",
-    "mobile": "手提電話",
+    "phone": "手提電話",
     "email": "電郵地址",
     "district": "地區",
     "address": "地址",
@@ -99,7 +99,12 @@
       "price": "$149 / 月",
       "detail": "更多資訊",
       "btn": "注冊並訂購"
-    }
+    },
+    "title": "計劃",
+    "recyclingBin": {
+      "deposit": "回收筒押金"
+    },
+    "total": "總計"
   },
   "changeplan": {
     "title": "更改計劃",
@@ -110,6 +115,12 @@
     "mobile": "手提電話"
   },
   "error": {
-    "login": "登入錯誤"
+    "login": "登入錯誤",
+    "missingField": "{field} 未填",
+    "confirmPassword": "密碼和確定密碼不一樣"
+  },
+  "otp": {
+    "title": "驗證電子郵件",
+    "send": "己發出確此電郵"
   }
 }

@@ -2,7 +2,7 @@
   <PageContainer>
     <div class="container">
       <div class="logoContainer">
-        <img src="/assets/images/icons/img_logo.png" alt="logo" width="100" />
+        <img src="/assets/images/icons/img_logo.png" alt="logo" />
       </div>
 
       <ion-slides pager="true" class="slides">
@@ -19,7 +19,7 @@
         <ion-slide>
           <div class="slideContainer">
             <IonImg src="/assets/images/slides/s3.png"></IonImg>
-            <IonButton mode="ios" @click="contuine">
+            <IonButton mode="ios" @click="contuine" expand="block">
               {{ t("action.next") }}
             </IonButton>
           </div>
@@ -71,15 +71,21 @@ export default defineComponent({
   width: 100%;
   overflow: hidden;
 }
-.loginContainer {
-  width: 50%;
-  height: 50px;
+.logoContainer {
+  padding-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   position: relative;
   margin: 0 auto;
 }
 .slideContainer {
   width: 100vw;
   height: 100%;
+  padding: 0 10px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
