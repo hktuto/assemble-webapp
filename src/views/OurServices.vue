@@ -1,7 +1,7 @@
 <template>
   <WithHeaderFooter :header="t('ourservices.title')">
     <div class="pageContent">
-      <p style="font-size: 14px; line-height:1.4;">
+      <p style="font-size: 14px; line-height: 1.4">
         <b>
           {{ t("ourservices.slogan1") }}
         </b>
@@ -16,7 +16,10 @@
       </p>
 
       <p>
-        {{ t("ourservices.notice") }}
+        {{ t("ourservices.notice1") }}
+        <img class="whatsapp" src="/assets/images/whatsapp.png" />
+        <a href="https://wa.me/+85293479770"> 93479770 </a>
+        {{ t("ourservices.notice2") }}
       </p>
       <IonRow>
         <IonCol size="6">
@@ -131,5 +134,11 @@ export default defineComponent({
   display: grid;
   grid-template-columns: 50% 50%;
   /* grid-template-rows: 20px 20px 20px 20px 20px 20px; */
+}
+
+.whatsapp {
+  width: 14px;
+  position: relative;
+  top: 2px;
 }
 </style>

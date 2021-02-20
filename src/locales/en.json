@@ -25,7 +25,8 @@
     "slogan1": "We provide you with a recycling bin",
     "slogan2": "We collect once a week",
     "slogan3": "We send them to recyclers, not the landfill",
-    "notice": "To ensure we can provide our service to your address,please whatsapp me on 93479770 to check before you subscribe to our service",
+    "notice1": "To ensure we can provide our service to your address,please whatsapp me on",
+    "notice2": "to check before you subscribe to our service",
     "deposite": "A $200 refundable deposit will be charged for the recycling bin"
   },
   "login": {
