@@ -77,9 +77,10 @@ export default defineComponent({
     const { locale, t } = useI18n();
     const share = async () =>
       await Share.share({
-        title: "this app is awesome",
-        text: "really awesome app",
-        url: "http://loverecyclingplus.com/",
+        title: "love recycling plus 家點匯收",
+        text:
+          "We Aim to Facilitate And Encourage Recycling In Hong Kong 我们旨在促进和鼓励回收",
+        url: "https://loverecyclingplus.com/recycling/website/",
       });
     const switchLanguage = async () => {
       locale.value = locale.value === "en" ? "zh" : "en";
