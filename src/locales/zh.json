@@ -39,7 +39,8 @@
   "donation": {
     "title": "捐款支持",
     "info": "如果您分享我們的信念和願景，歡迎捐款。您的支持將可幫助我們使這個回收計劃變得可負擔和可持續。",
-    "donate": "你將會捐贈"
+    "donate": "你將會捐贈",
+    "other": "自定"
   },
   "register": {
     "title": "注冊",
@@ -50,7 +51,8 @@
     "district": "地區",
     "address": "地址",
     "password": "密碼",
-    "confirmpassword": "確認密碼"
+    "confirmpassword": "確認密碼",
+    "name": "名稱"
   },
   "howto": {
     "title": "說明"
@@ -81,7 +83,9 @@
     "mobile": "手提電話",
     "email": "電郵地址",
     "district": "地區",
-    "address": "地址"
+    "address": "地址",
+    "updateSuccess": "更新成功",
+    "updateFail": "更新失敗"
   },
   "plan": {
     "plana": {
@@ -108,7 +112,8 @@
   },
   "changeplan": {
     "title": "更改計劃",
-    "confirm": "更改"
+    "confirm": "更改",
+    "success": "更新成功"
   },
   "forgetpassword": {
     "title": "忘記密碼",
@@ -122,5 +127,9 @@
   "otp": {
     "title": "驗證電子郵件",
     "send": "己發出確此電郵"
+  },
+  "thnakyou": {
+    "title": "感謝您的支持",
+    "descrition": "我們努力使回收在香港取得成功"
   }
 }

@@ -20,19 +20,31 @@ const ChangePlan = () => import("./views/ChangePlan.vue");
 const ForgetPassword = () => import("./views/ForgetPassword.vue");
 const OTP = () => import("./views/otp.vue");
 const RegisterPayment = () => import("./views/RegisterPayment.vue");
+const DonationComplete = () => import("./views/DonationComplete.vue");
+const Thankyou = () => import("./views/Thankyou.vue");
 
-const needAuth: NavigationGuard = function(to: any, from: any, next: any) {
+const needAuth: NavigationGuard = async function(
+  to: any,
+  from: any,
+  next: any
+) {
+  const { init } = useApp();
   const { isLogin } = useUser();
+  await init();
   if (!isLogin.value) {
-    next({ name: "login", query: { redirect: to.fullPath } });
+    next({ name: "Login", query: { redirect: to.fullPath } });
   } else {
     next();
   }
 };
 
-const isAppReady: NavigationGuard = function(to: any, from: any, next: any) {
+const isAppReady: NavigationGuard = async function(
+  to: any,
+  from: any,
+  next: any
+) {
   const { init, firstLunched } = useApp();
-  init();
+  await init();
   if (firstLunched.value) {
     next({ name: "Home" });
   } else {
@@ -83,6 +95,16 @@ const routes: Array<RouteRecordRaw> = [
     component: Donation,
   },
   {
+    path: "/DonationComplete",
+    name: "DonationComplete",
+    component: DonationComplete,
+  },
+  {
+    path: "/Thankyou",
+    name: "Thankyou",
+    component: Thankyou,
+  },
+  {
     path: "/MyProfile",
     name: "MyProfile",
     component: MyProfile,
@@ -122,6 +144,7 @@ const routes: Array<RouteRecordRaw> = [
     path: "/ChangePlan",
     name: "ChangePlan",
     component: ChangePlan,
+    beforeEnter: needAuth,
   },
   {
     path: "/ForgetPassword",

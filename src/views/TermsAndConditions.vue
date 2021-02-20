@@ -1,7 +1,7 @@
 <template>
   <WithHeaderFooter
     :header="t('terms.title')"
-    background="/assets/menu/bg_howto.svg"
+    background="/assets/menu/bg_aboutus.svg"
   >
     <div class="pageContent">
       <ol>

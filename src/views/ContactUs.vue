@@ -1,5 +1,8 @@
 <template>
-  <WithHeaderFooter :header="t('contactus.title')">
+  <WithHeaderFooter
+    :header="t('contactus.title')"
+    background="/assets/menu/bg_aboutus.svg"
+  >
     <div class="pageContent">
       <p>{{ t("contactus.companyname") }}</p>
       <p>{{ t("contactus.address1") }}</p>

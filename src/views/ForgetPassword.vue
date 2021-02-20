@@ -11,7 +11,7 @@
           mode="ios"
         ></IonInput>
       </div>
-      <IonButton mode="ios" expand="block" :disabled="!!phone" @click="submit">
+      <IonButton mode="ios" expand="block" :disabled="!phone" @click="submit">
         {{ t("action.submit") }}
       </IonButton>
       <hr />
@@ -34,15 +34,19 @@ import { defineComponent, ref } from "vue";
 import WithHeaderFooter from "@/layout/WithHeaderFooter.vue";
 import { useI18n } from "vue-i18n";
 import { IonInput, IonButton } from "@ionic/vue";
+import { useRouter } from "vue-router";
 
 export default defineComponent({
   components: { WithHeaderFooter, IonInput, IonButton },
   setup() {
     const { t } = useI18n();
     const phone = ref("");
-
+    const router = useRouter();
     const submit = async () => {
       await console.log(phone.value);
+      router.push({
+        name: "Login",
+      });
     };
     return {
       t,

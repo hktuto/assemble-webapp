@@ -35,16 +35,9 @@ export default defineComponent({
       otp: "",
     });
     const submit = async () => {
-      try {
-        if (form.otp) {
-          console.log(form);
-          await submitOTP(form);
-          router.push({ name: "RegisterPayment" });
-        }
-      } catch (error) {
-        Toast.show({
-          text: error,
-        });
+      if (form.otp) {
+        await submitOTP(form);
+        router.push({ name: "RegisterPayment" });
       }
       form.otp = "";
     };

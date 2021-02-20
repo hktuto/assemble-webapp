@@ -24,7 +24,7 @@
 import { defineComponent, computed } from "vue";
 import WithHeaderFooter from "@/layout/WithHeaderFooter.vue";
 
-import { IonLabel } from "@ionic/vue";
+import { IonLabel, IonButton } from "@ionic/vue";
 import { useI18n } from "vue-i18n";
 import useUser from "@/state/useUser";
 
@@ -34,7 +34,7 @@ import { useRouter } from "vue-router";
 const { Browser } = Plugins;
 
 export default defineComponent({
-  components: { WithHeaderFooter, IonLabel },
+  components: { WithHeaderFooter, IonLabel, IonButton },
   setup() {
     const { t } = useI18n();
     const { plan, user } = useUser();
@@ -43,7 +43,7 @@ export default defineComponent({
 
     const confirm = async () => {
       await Browser.open({
-        url: `${baseURL}/tripe/index.php?amount=${total.value}&user_id=${user.value.user_id}`,
+        url: `${baseURL}stripe/index.php?amount=${total.value}&user_id=${user.value.user_id}`,
       });
       router.push({
         name: "Login",

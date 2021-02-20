@@ -39,7 +39,8 @@
   "donation": {
     "title": "Donation",
     "info": "Your donation will help us make recycling in Hong Kong more available, affordable and sustainable. If you share our vision and belief,we welcome your donations.",
-    "donate": "You are donating in"
+    "donate": "You are donating in",
+    "other": "Other"
   },
   "register": {
     "title": "Register",
@@ -50,7 +51,8 @@
     "district": "District",
     "address": "Address",
     "password": "Password",
-    "confirmpassword": "Confirm Password"
+    "confirmpassword": "Confirm Password",
+    "name": "Name"
   },
   "howto": {
     "title": "How To"
@@ -81,7 +83,9 @@
     "mobile": "Mobile",
     "email": "Email",
     "district": "District",
-    "address": "Address"
+    "address": "Address",
+    "updateSuccess": "Update Success",
+    "updateFail": "Update Fail"
   },
   "plan": {
     "plana": {
@@ -108,7 +112,8 @@
   },
   "changeplan": {
     "title": "Change Plan",
-    "confirm": "Confirm"
+    "confirm": "Confirm",
+    "success": "Plan Changed thanks you"
   },
   "forgetpassword": {
     "title": "Forgot Password",
@@ -122,5 +127,9 @@
   "otp": {
     "title": "Validate Email",
     "send": " User created successfully! OTP sent to your email address. Please enter the OTP to validate."
+  },
+  "thnakyou": {
+    "title": "Thank You For Your Support",
+    "descrition": "We endeavour to make recyling a success in Hong Kong"
   }
 }

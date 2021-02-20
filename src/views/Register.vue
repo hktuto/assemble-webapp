@@ -129,10 +129,10 @@ export default defineComponent({
         await validate();
         await checkPassword();
         await register(registerForm);
-        router.push({ name: "OTP" });
-        Toast.show({
-          text: t("otp.send"),
-        });
+        router.push({ name: "RegisterPayment" });
+        // Toast.show({
+        //   text: t("otp.send"),
+        // });
       } catch (error) {
         console.log(error);
         Toast.show({

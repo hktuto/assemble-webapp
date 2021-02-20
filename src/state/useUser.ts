@@ -18,15 +18,49 @@ export type RegisterForm = {
   password: string;
 };
 
+export type UserForm = {
+  firstname: string;
+  lastname: string;
+  phone: string;
+  district: string;
+  address: string;
+  // eslint-disable-next-line @typescript-eslint/camelcase
+  user_id: string;
+  // eslint-disable-next-line @typescript-eslint/camelcase
+  auth_key: string;
+};
+
 export type OTPForm = { email_id: any; otp: string };
 
 export default function useUser() {
+  const validate = async (userId: string, authKey: string) => {
+    try {
+      const form = new FormData();
+      form.append("user_id", userId);
+      form.append("auth_key", authKey);
+      const {
+        data: { user_details },
+      } = await apiService.post("UserPanel/get_user_profile", form);
+
+      state.isLogin = true;
+
+      state.user = {
+        ...state.user,
+        ...user_details[0],
+      };
+      console.log(state.user);
+    } catch (error) {
+      state.isLogin = false;
+      state.user = null;
+    }
+  };
+
   const signin = async (phone: string, password: string) => {
     const formData = new FormData();
     formData.append("phone", phone);
     formData.append("password", password);
     const { data } = await apiService.post(
-      "/UserPanel/post_customer_login",
+      "UserPanel/post_customer_login",
       formData
     );
     if (data.status) {
@@ -69,10 +103,24 @@ export default function useUser() {
     for (const [key, value] of Object.entries(form)) {
       formData.append(key, value);
     }
-    const { data } = await apiService.post("/UserPanel/checkotp", form);
+    const { data } = await apiService.post("UserPanel/checkotp", form);
     if (!data.status) {
       throw data.message;
     }
+  };
+
+  const updateUser = async (form: UserForm) => {
+    const formData = new FormData();
+    for (const [key, value] of Object.entries(form)) {
+      formData.append(key, value);
+    }
+    const {
+      data: { success },
+    } = await apiService.post(
+      "UserPanel/post_customer_profile_update",
+      formData
+    );
+    return success;
   };
 
   const logout = () => {
@@ -87,9 +135,11 @@ export default function useUser() {
 
   return {
     ...toRefs(state),
+    validate,
     signin,
     logout,
     register,
     submitOTP,
+    updateUser,
   };
 }

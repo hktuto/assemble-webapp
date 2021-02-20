@@ -25,11 +25,16 @@ const { Browser } = Plugins;
 export default defineComponent({
   components: { WithHeaderFooter, IonImg },
   setup() {
-    const { t } = useI18n();
-    const goDetail = async () =>
+    const { t, locale } = useI18n();
+    const goDetail = async () => {
+      const url =
+        locale.value === "en"
+          ? "https://loverecyclingplus.com/recycling/superadmin/pdf/types.pdf"
+          : "https://loverecyclingplus.com/recycling/superadmin/pdf/chinese-types.pdf";
       await Browser.open({
-        url: "https://loverecyclingplus.com/recycling/superadmin/pdf/types.pdf",
+        url,
       });
+    };
     return {
       t,
       goDetail,

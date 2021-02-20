@@ -46,7 +46,7 @@ export default defineComponent({
     const { t } = useI18n();
     const goAboutUs = async () =>
       await Browser.open({
-        url: "https://loverecyclingplus.com/",
+        url: "https://loverecyclingplus.com/recycling/website/",
       });
     return {
       t,

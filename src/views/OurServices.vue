@@ -1,7 +1,7 @@
 <template>
   <WithHeaderFooter :header="t('ourservices.title')">
     <div class="pageContent">
-      <p>
+      <p style="font-size: 14px; line-height:1.4;">
         <b>
           {{ t("ourservices.slogan1") }}
         </b>
@@ -50,7 +50,7 @@
           <h4>
             {{ t("plan.plana.price") }}
           </h4>
-          <small>
+          <small @click="openPlanPdf">
             {{ t("plan.plana.detail") }}
           </small>
         </IonCol>
@@ -58,7 +58,7 @@
           <h4>
             {{ t("plan.planb.price") }}
           </h4>
-          <small>
+          <small @click="openPlanPdf">
             {{ t("plan.planb.detail") }}
           </small>
         </IonCol>
@@ -90,20 +90,32 @@ import WithHeaderFooter from "@/layout/WithHeaderFooter.vue";
 import { useI18n } from "vue-i18n";
 import useUser from "@/state/useUser";
 import { useRouter } from "vue-router";
+
+import { Plugins } from "@capacitor/core";
+const { Browser } = Plugins;
 export default defineComponent({
   components: { WithHeaderFooter, IonButton, IonRow, IonCol },
   setup() {
-    const { t } = useI18n();
+    const { t, locale } = useI18n();
     const { plan } = useUser();
     const router = useRouter();
     const register = (pickPlan: number) => {
       plan.value = pickPlan;
+      localStorage.setItem("rate", String(pickPlan));
       router.push({ name: "Register" });
+    };
+    const openPlanPdf = async () => {
+      const url =
+        locale.value === "en"
+          ? "https://loverecyclingplus.com/recycling/superadmin/pdf/plans.pdf"
+          : "https://loverecyclingplus.com/recycling/superadmin/pdf/chinese-plans.pdf";
+      await Browser.open({ url });
     };
     return {
       t,
       plan,
       register,
+      openPlanPdf,
     };
   },
 });

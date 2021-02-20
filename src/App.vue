@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { IonApp, IonRouterOutlet } from "@ionic/vue";
-import { defineComponent } from "vue";
+import { defineComponent, onBeforeMount } from "vue";
 import { useApp } from "./state/useApp";
 import { useI18n } from "vue-i18n";
 
@@ -20,7 +20,12 @@ export default defineComponent({
     const { init, getDistrict } = useApp();
     const { locale } = useI18n({ useScope: "global" });
     locale.value = localStorage.getItem("appLocale") || "en";
-    getDistrict();
+    onBeforeMount(async () => {
+      console.log("app init");
+      await getDistrict();
+      await init();
+    });
+
     return {
       init,
       locale,
@@ -63,7 +68,7 @@ export default defineComponent({
 }
 .inputContainer {
   width: 100%;
-  padding: 0px 10px;
+  padding: 0px 20px;
   border-radius: 25px;
   border: 1px solid var(--ion-color-primary);
   margin-bottom: 10px;
@@ -79,7 +84,11 @@ export default defineComponent({
   max-width: 640px;
   margin: 0 auto;
 }
-body {
+html {
   background-color: #fff;
+}
+
+ion-select {
+  --padding-start: 0px;
 }
 </style>
