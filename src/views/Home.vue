@@ -79,8 +79,8 @@ export default defineComponent({
       await Share.share({
         title: "love recycling plus 家點匯收",
         text:
-          "We Aim to Facilitate And Encourage Recycling In Hong Kong 我们旨在促进和鼓励回收",
-        url: "https://loverecyclingplus.com/recycling/website/",
+          "We Aim to Facilitate And Encourage Recycling In Hong Kong 我們旨在促進和鼓勵回收 我們希望每個人都能為我們的社區，我們的星球和我們的孩子們儘自己的一份力量",
+        url: "https://loverecyclingplus.com",
       });
     const switchLanguage = async () => {
       locale.value = locale.value === "en" ? "zh" : "en";
