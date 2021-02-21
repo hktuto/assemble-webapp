@@ -28,7 +28,7 @@ const { Browser } = Plugins;
 export default defineComponent({
   components: { WithHeaderFooter, IonInput, IonButton },
   setup() {
-    const { t } = useI18n();
+    const { t, locale } = useI18n();
     const route = useRoute();
     const router = useRouter();
 
@@ -37,7 +37,9 @@ export default defineComponent({
         route.query.amount
       }&user_id=${localStorage.getItem("user_id")}&email=${
         route.query.email
-      }&name=${route.query.name}&donating_in=${route.query.donating_in}`;
+      }&name=${route.query.name}&donating_in=${route.query.donating_in}&lang=${
+        locale.value === "zh" ? "ch" : "en"
+      }`;
       await Browser.open({
         url,
       });

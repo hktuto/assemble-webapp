@@ -36,15 +36,19 @@ const { Browser } = Plugins;
 export default defineComponent({
   components: { WithHeaderFooter, IonLabel, IonButton },
   setup() {
-    const { t } = useI18n();
+    const { t, locale } = useI18n();
     const { plan, user } = useUser();
     const router = useRouter();
     const total = computed(() => plan.value + 200);
 
     const confirm = async () => {
+      const url = `${baseURL}stripe/index.php?amount=${total.value}&user_id=${
+        user.value.user_id
+      }&lang=${locale.value === "zh" ? "ch" : "en"}`;
       await Browser.open({
-        url: `${baseURL}stripe/index.php?amount=${total.value}&user_id=${user.value.user_id}`,
+        url,
       });
+      console.log(url);
       router.push({
         name: "Thankyouplan",
       });
