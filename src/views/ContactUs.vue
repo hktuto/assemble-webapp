@@ -68,4 +68,7 @@ export default defineComponent({
   text-align: left;
   align-items: flex-start;
 }
+.bgContainer {
+  background-image: url(/assets/images/bg/bg_about.png);
+}
 </style>
