@@ -36,7 +36,7 @@
             v-for="item in districts"
             :key="item.id"
             :value="item.id"
-            >{{ item.district_name }}</ion-select-option
+            >{{ t(`district.${item.id}`) }}</ion-select-option
           >
         </IonSelect>
       </div>

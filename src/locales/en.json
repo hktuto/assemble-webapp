@@ -135,5 +135,31 @@
   "thnakyou": {
     "title": "Thank You For Your Support",
     "descrition": "We endeavour to make recyling a success in Hong Kong"
+  },
+  "thankyouplan": {
+    "title": "Thank You",
+    "description": "We will be in touch to deliver<br />your recycle bin"
+  },
+  "district": {
+    "8": "Tai Au Mun Road, Clear Water Bay",
+    "9": "Sheung Sze Wan Road, Clear Water Bay",
+    "10": "Lung Ha Wan Road, Clear Water Bay",
+    "11": "Tai Wan Tau Road, Clear Water Bay",
+    "12": "Leung Fai Tin Upper Road, Clear Water Bay",
+    "13": "Leung Fai Tin Lower Road, Clear Water Bay",
+    "14": "Ha Yeung San Tsuen Road, Clear Water Bay",
+    "15": "Ha Yeung Road, Clear Water Bay",
+    "16": "Pak To Avenue, Clear Water Bay",
+    "17": "Sheung Yeung Village, Clear Water Bay",
+    "18": "Sheung Yeung Village 2, Clear Water Bay",
+    "19": "Pan Long Wan Road, Clear Water Bay",
+    "20": "Hang Hau Wing Lung Road, Clear Water Bay",
+    "21": "Mang Kung Uk, Clear Water Bay",
+    "22": "Pik Sha Road, Clear Water Bay",
+    "23": "Silver Cape Road, Clear Water Bay",
+    "24": "Clear Water Bay Road, Clear Water Bay",
+    "25": "Ng Fai Tin, Clear Water Bay",
+    "26": "Silverstrand Beach Road, Clear Water Bay",
+    "29": "Other"
   }
 }

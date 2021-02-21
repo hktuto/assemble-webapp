@@ -22,7 +22,7 @@ const OTP = () => import("./views/otp.vue");
 const RegisterPayment = () => import("./views/RegisterPayment.vue");
 const DonationComplete = () => import("./views/DonationComplete.vue");
 const Thankyou = () => import("./views/Thankyou.vue");
-
+const Thankyouplan = () => import("./views/ThankypuPlan.vue");
 // pdf
 
 const PlanPdf = () => import("./views/PlanPdf.vue");
@@ -93,6 +93,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "RegisterPayment",
     path: "/RegisterPayment",
     component: RegisterPayment,
+  },
+  {
+    name: "Thankyouplan",
+    path: "/Thankyouplan",
+    component: Thankyouplan,
   },
   {
     path: "/Donation",
