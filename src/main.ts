@@ -6,8 +6,8 @@ import { i18n } from "./i18n";
 
 import { IonicVue } from "@ionic/vue";
 
-import { Plugins } from "@capacitor/core";
-const { SplashScreen } = Plugins;
+// import { Plugins } from "@capacitor/core";
+// const { SplashScreen } = Plugins;
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/vue/css/core.css";
@@ -37,6 +37,6 @@ const app = createApp(App)
 
 router.isReady().then(() => {
   app.mount("#app");
-  SplashScreen.hide();
+  // SplashScreen.hide();
   defineCustomElements(window);
 });

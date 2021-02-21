@@ -15,4 +15,8 @@ export default defineComponent({
 });
 </script>
 
-<style></style>
+<style scoped>
+.bgContainer {
+  background-image: url(/assets/images/bg/bg_schedule.png);
+}
+</style>

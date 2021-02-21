@@ -70,4 +70,8 @@ export default defineComponent({
   width: 100%;
   margin: 5px 0;
 }
+
+.bgContainer {
+  background-image: url(/assets/images/bg/bg_about.png);
+}
 </style>

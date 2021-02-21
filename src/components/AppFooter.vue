@@ -1,5 +1,5 @@
 <template>
-  <IonFooter>
+  <IonFooter v-show="!keyboardShow">
     <div class="footerContainer">
       <div class="menuItem" @click="$router.push({ name: 'Home' })">
         <div :class="{ iconContainer: true, selected: $route.name === 'Home' }">
@@ -62,7 +62,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, ref, onMounted, onUnmounted } from "vue";
 import { IonFooter, IonIcon } from "@ionic/vue";
 
 // import { Plugins } from "@capacitor/core";
@@ -80,7 +80,27 @@ export default defineComponent({
     },
   },
   setup() {
-    return {};
+    const keyboardShow = ref(false);
+    const hideFooter = () => {
+      keyboardShow.value = true;
+    };
+    const showFooter = () => {
+      keyboardShow.value = false;
+    };
+    onMounted(() => {
+      window.addEventListener("keyboardWillShow", hideFooter);
+      window.addEventListener("keyboardWillHide", showFooter);
+    });
+
+    onUnmounted(() => {
+      window.removeEventListener("keyboardWillShow", hideFooter);
+      window.removeEventListener("keyboardWillHide", showFooter);
+    });
+    return {
+      keyboardShow,
+      showFooter,
+      hideFooter,
+    };
   },
 });
 </script>

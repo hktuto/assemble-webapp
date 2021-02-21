@@ -46,7 +46,7 @@ export default defineComponent({
         url: `${baseURL}stripe/index.php?amount=${total.value}&user_id=${user.value.user_id}`,
       });
       router.push({
-        name: "Login",
+        name: "Thankyouplan",
       });
     };
     return {

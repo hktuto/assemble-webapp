@@ -38,4 +38,7 @@ li {
   line-height: 1.2;
   margin-bottom: 10px;
 }
+.bgContainer {
+  background-image: url(/assets/images/bg/bg_about.png);
+}
 </style>

@@ -47,9 +47,9 @@ export default defineComponent({
   position: fixed;
   left: 0;
   right: 0;
-  height: 180px;
+  height: 300px;
   bottom: 40px;
-  background-image: url(/assets/images/home/home_bg.png);
+  background-image: url(/assets/images/bg/bg_home.png);
   background-position: center bottom;
   background-size: cover;
   z-index: -1;
