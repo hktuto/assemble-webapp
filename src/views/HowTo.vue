@@ -18,21 +18,19 @@ import { defineComponent } from "vue";
 import WithHeaderFooter from "@/layout/WithHeaderFooter.vue";
 import { useI18n } from "vue-i18n";
 import { IonImg } from "@ionic/vue";
+import { useRouter } from "vue-router";
 
-import { Plugins } from "@capacitor/core";
-const { Browser } = Plugins;
+// import { Plugins } from "@capacitor/core";
+// const { Browser } = Plugins;
 
 export default defineComponent({
   components: { WithHeaderFooter, IonImg },
   setup() {
-    const { t, locale } = useI18n();
+    const { t } = useI18n();
+    const router = useRouter();
     const goDetail = async () => {
-      const url =
-        locale.value === "en"
-          ? "https://loverecyclingplus.com/recycling/superadmin/pdf/types.pdf"
-          : "https://loverecyclingplus.com/recycling/superadmin/pdf/chinese-types.pdf";
-      await Browser.open({
-        url,
+      router.push({
+        name: "HowToPdf",
       });
     };
     return {

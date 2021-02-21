@@ -23,6 +23,11 @@ const RegisterPayment = () => import("./views/RegisterPayment.vue");
 const DonationComplete = () => import("./views/DonationComplete.vue");
 const Thankyou = () => import("./views/Thankyou.vue");
 
+// pdf
+
+const PlanPdf = () => import("./views/PlanPdf.vue");
+const HowToPdf = () => import("./views/HowToPdf.vue");
+
 const needAuth: NavigationGuard = async function(
   to: any,
   from: any,
@@ -116,6 +121,11 @@ const routes: Array<RouteRecordRaw> = [
     component: HowTo,
   },
   {
+    path: "/HowToPdf",
+    name: "HowToPdf",
+    component: HowToPdf,
+  },
+  {
     path: "/Schedule",
     name: "Schedule",
     component: Schedule,
@@ -129,6 +139,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/OurServices",
     name: "OurServices",
     component: OurServices,
+  },
+  {
+    path: "/PlanPdf",
+    name: "PlanPdf",
+    component: PlanPdf,
   },
   {
     path: "/TermsAndConditions",

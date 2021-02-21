@@ -22,7 +22,8 @@
     "core-js": "^3.6.5",
     "vue": "^3.0.0-0",
     "vue-i18n": "^9.0.0-rc.7",
-    "vue-router": "^4.0.0-0"
+    "vue-router": "^4.0.0-0",
+    "vue3-pdf": "^4.2.6"
   },
   "devDependencies": {
     "@capacitor/cli": "2.4.6",

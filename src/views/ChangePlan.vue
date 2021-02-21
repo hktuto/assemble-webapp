@@ -36,7 +36,7 @@
             <h4>
               {{ t("plan.plana.price") }}
             </h4>
-            <small>
+            <small class="link" @click="openPlanPdf(1)">
               {{ t("plan.plana.detail") }}
             </small>
           </IonCol>
@@ -44,7 +44,7 @@
             <h4>
               {{ t("plan.planb.price") }}
             </h4>
-            <small>
+            <small class="link" @click="openPlanPdf(2)">
               {{ t("plan.planb.detail") }}
             </small>
           </IonCol>
@@ -106,10 +106,20 @@ export default defineComponent({
       }
     };
 
+    const openPlanPdf = async (page: number) => {
+      router.push({
+        name: "PlanPdf",
+        params: {
+          page,
+        },
+      });
+    };
+
     return {
       t,
       plan,
       changePlan,
+      openPlanPdf,
     };
   },
 });

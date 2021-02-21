@@ -84,6 +84,9 @@ export default defineComponent({
   max-width: 640px;
   margin: 0 auto;
 }
+.link {
+  color: var(--ion-color-primary);
+}
 html {
   background-color: #fff;
 }
