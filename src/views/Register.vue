@@ -124,15 +124,27 @@ export default defineComponent({
       }
     };
 
+    const reset = () => {
+      registerForm.firstname = "";
+      registerForm.lastname = "";
+      registerForm.phone = "";
+      registerForm.email = "";
+      registerForm.district = "";
+      registerForm.address = "";
+      registerForm.password = "";
+      confirmPassword.value = "";
+    };
+
     const submit = async () => {
       try {
         await validate();
         await checkPassword();
         await register(registerForm);
-        router.push({ name: "RegisterPayment" });
-        // Toast.show({
-        //   text: t("otp.send"),
-        // });
+        router.push({ name: "OTP" });
+        Toast.show({
+          text: t("otp.send"),
+        });
+        reset();
       } catch (error) {
         console.log(error);
         Toast.show({

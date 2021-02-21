@@ -127,7 +127,10 @@
   },
   "otp": {
     "title": "驗證電子郵件",
-    "send": "己發出確此電郵"
+    "send": "己發出確此電郵",
+    "success": "己確定電郵",
+    "fail": "驗證碼不正確",
+    "placeholder": "請輸入驗證碼"
   },
   "thnakyou": {
     "title": "感謝您的支持",

@@ -3,7 +3,7 @@
   <WithHeaderFooter :header="t('otp.title')">
     <div class="pageContent">
       <div class="inputContainer">
-        <IonInput v-model="otp"></IonInput>
+        <IonInput v-model="otp" :placeholder="t('otp.placeholder')"></IonInput>
       </div>
       <IonButton mode="ios" expand="block" :disabled="!otp" @click="submit">{{
         t("action.submit")
@@ -35,9 +35,16 @@ export default defineComponent({
       otp: "",
     });
     const submit = async () => {
-      if (form.otp) {
+      try {
         await submitOTP(form);
         router.push({ name: "RegisterPayment" });
+        Toast.show({
+          text: t("otp.success"),
+        });
+      } catch (error) {
+        Toast.show({
+          text: t("otp.fail"),
+        });
       }
       form.otp = "";
     };

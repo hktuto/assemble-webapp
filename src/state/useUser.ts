@@ -100,10 +100,13 @@ export default function useUser() {
 
   const submitOTP = async (form: OTPForm) => {
     const formData = new FormData();
-    for (const [key, value] of Object.entries(form)) {
-      formData.append(key, value);
-    }
-    const { data } = await apiService.post("UserPanel/checkotp", form);
+    formData.append("email_id", form.email_id);
+    formData.append("otp", form.otp);
+    const { data } = await apiService.post("UserPanel/checkotp", formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
     if (!data.status) {
       throw data.message;
     }

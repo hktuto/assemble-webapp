@@ -127,7 +127,10 @@
   },
   "otp": {
     "title": "Validate Email",
-    "send": " User created successfully! OTP sent to your email address. Please enter the OTP to validate."
+    "send": " User created successfully! OTP sent to your email address. Please enter the OTP to validate.",
+    "success": "Email Verified",
+    "fail": "Code invaild",
+    "placeholder": "Type your OTP"
   },
   "thnakyou": {
     "title": "Thank You For Your Support",
