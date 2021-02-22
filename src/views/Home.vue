@@ -4,7 +4,7 @@
       <div class="header">
         <img src="/assets/images/home_header.png" />
       </div>
-      <div class="content">
+      <div class="content center">
         <IonButton
           v-if="!isLogin"
           expand="block"
@@ -110,5 +110,13 @@ export default defineComponent({
 .content > .button-block {
   width: 100%;
   margin: 5px 0;
+}
+.pageContent {
+  height: 100%;
+  padding-bottom: 100px;
+}
+.content.center {
+  justify-content: center;
+  align-items: center;
 }
 </style>

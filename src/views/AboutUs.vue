@@ -8,7 +8,7 @@
         <IonImg src="/assets/images/icons/img_logo.png" />
       </div>
 
-      <div class="content">
+      <div class="content center">
         <IonButton expand="block" mode="ios" @click="goAboutUs">
           {{ t("menu.aboutus") }}
         </IonButton>
@@ -73,5 +73,14 @@ export default defineComponent({
 
 .bgContainer {
   background-image: url(/assets/images/bg/bg_about.png);
+}
+
+.pageContent {
+  height: 100%;
+  padding-bottom: 100px;
+}
+.content.center {
+  justify-content: center;
+  align-items: center;
 }
 </style>

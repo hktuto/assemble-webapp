@@ -10,7 +10,7 @@
           />
         </div>
 
-        <label>Home {{ t("home.title") }}</label>
+        <label>{{ t("home.title") }}</label>
       </div>
       <div class="menuItem" @click="$router.push({ name: 'HowTo' })">
         <div
