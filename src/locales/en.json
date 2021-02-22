@@ -6,7 +6,8 @@
     "myprofile": "My Profile",
     "share": "Tell A Friend",
     "aboutus": "About Us",
-    "logout": "Logout"
+    "logout": "Logout",
+    "home": "主頁"
   },
   "language": {
     "switch": "中 / Eng"
@@ -27,7 +28,7 @@
     "slogan3": "We send them to recyclers, not the landfill",
     "notice1": "To ensure we can provide our service to your address,please whatsapp me on",
     "notice2": "to check before you subscribe to our service",
-    "deposite": "A $200 refundable deposit will be charged for the recycling bin"
+    "deposite": "A $250 refundable deposit will be charged for the recycling bin"
   },
   "login": {
     "title": "Login",
@@ -161,5 +162,14 @@
     "25": "Ng Fai Tin, Clear Water Bay",
     "26": "Silverstrand Beach Road, Clear Water Bay",
     "29": "Other"
+  },
+  "home": {
+    "title": "Home"
+  },
+  "schedule": {
+    "title": ">Schedule"
+  },
+  "aboutus": {
+    "title": "About Us"
   }
 }

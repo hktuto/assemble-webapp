@@ -10,7 +10,7 @@
           />
         </div>
 
-        <label>Home</label>
+        <label>Home {{ t("home.title") }}</label>
       </div>
       <div class="menuItem" @click="$router.push({ name: 'HowTo' })">
         <div
@@ -24,7 +24,7 @@
             "
           />
         </div>
-        <label>How To</label>
+        <label>{{ t("howto.title") }}</label>
       </div>
       <div class="menuItem" @click="$router.push({ name: 'Schedule' })">
         <div
@@ -38,7 +38,7 @@
             "
           />
         </div>
-        <label>Schedule</label>
+        <label>{{ t("schedule.title") }}</label>
       </div>
       <div class="menuItem" @click="$router.push({ name: 'AboutUs' })">
         <div
@@ -52,7 +52,7 @@
             "
           />
         </div>
-        <label>About Us</label>
+        <label>{{ t("aboutus.title") }}</label>
       </div>
       <div class="bg_container">
         <img :src="background" />
@@ -64,6 +64,7 @@
 <script lang="ts">
 import { defineComponent, ref, onMounted, onUnmounted } from "vue";
 import { IonFooter, IonIcon } from "@ionic/vue";
+import { useI18n } from "vue-i18n";
 
 // import { Plugins } from "@capacitor/core";
 // const { Browser } = Plugins;
@@ -80,6 +81,7 @@ export default defineComponent({
     },
   },
   setup() {
+    const { t } = useI18n();
     const keyboardShow = ref(false);
     const hideFooter = () => {
       keyboardShow.value = true;
@@ -97,6 +99,7 @@ export default defineComponent({
       window.removeEventListener("keyboardWillHide", showFooter);
     });
     return {
+      t,
       keyboardShow,
       showFooter,
       hideFooter,

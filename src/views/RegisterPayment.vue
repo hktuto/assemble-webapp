@@ -7,7 +7,7 @@
       </div>
       <h5>{{ t("plan.recyclingBin.deposit") }}</h5>
       <div class="inputContainer">
-        <IonLabel>$200</IonLabel>
+        <IonLabel>$250</IonLabel>
       </div>
       <h5>{{ t("plan.total") }}</h5>
       <div class="inputContainer">
@@ -39,7 +39,7 @@ export default defineComponent({
     const { t, locale } = useI18n();
     const { plan, user } = useUser();
     const router = useRouter();
-    const total = computed(() => plan.value + 200);
+    const total = computed(() => plan.value + 250);
 
     const confirm = async () => {
       const url = `${baseURL}stripe/index.php?amount=${total.value}&user_id=${
